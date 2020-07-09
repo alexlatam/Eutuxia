@@ -11,8 +11,8 @@
 			<h2 class="servicios_header_title">Servicios</h2>
 		</div>
 	</header>
+	<h2 class="servicio_seo_title">Servicio de SEO</h2>
 	<section class="servicio_seo">
-		<h2 class="servicio_seo_title">Servicio de SEO</h2>
 		<div class="servicio_seo_body">
 			<div>
 				<h3>title</h3>

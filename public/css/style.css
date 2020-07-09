@@ -113,10 +113,12 @@
 }
 
 .servicio_seo_title{
+	height: 20vh;
 	text-align: center;
 }
 
 .servicio_seo_body{
+	height: 80vh;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -155,6 +157,7 @@
 .nosotros_header{
 	height: 100vh;
 	background-color: pink;
+
 }
 
 .nosotros_header_body{
@@ -173,4 +176,29 @@
 .nosotros_quien{
 	height: 90vh;
 	background-color: blue;
+}
+
+
+/*---------------------- CONTACTANOS --------------------------*/
+
+.contactanos_header{
+	height: 100vh;
+	background-color: pink;
+	display: flex;
+	flex-direction: column;
+}
+
+.contactanos_header_body{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.input_contactanos {
+	margin-bottom: 1.4rem;
+	background: #fff; 
+}
+
+
+.contactanos_submit{
+	width: 100%;
 }

@@ -28,3 +28,7 @@ Route::get('/servicios', function () {
 Route::get('/nosotros', function () {
     return view('nosotros.index');
 });
+
+Route::get('/contactanos', function () {
+    return view('contactanos.index');
+});
