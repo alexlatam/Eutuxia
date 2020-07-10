@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Productos Eutuxia</title>
-	@include('common.head')
-</head>
-<body>
+@extends('home.main')
+@section('title')
+	Productos
+@endsection
+
+@section('content')
 	<header class="productos_header">
-		@include('home.menu')
 		<h2>Productos</h2>
 	</header>
 	<div class="productos_section_title">
@@ -66,8 +64,4 @@
 		<h2>Trabaja con nosotros</h2>
 		<a href="#">Contactanos</a>
 	</section>
-	<footer>
-		footer
-	</footer>
-</body>
-</html>
+@endsection
