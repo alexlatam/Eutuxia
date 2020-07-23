@@ -322,6 +322,19 @@
 .productos_header{
 	height: 100vh;
 	background-color: pink;
+	display: flex;
+	flex-direction: column;
+}
+
+.productos_header_body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex:1;
+}
+
+.productos_header_title{
+  
 }
 
 .productos_paginas{
@@ -411,7 +424,7 @@
 }
 
 .servicio_seo{
-	height: 100vh;
+	height: 80vh;
 	background-color: yellow;
 }
 
@@ -426,15 +439,15 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.servicio_seo_body.servicio_1{
+	background-color:aquamarine;
+}
 .servicio_seo_body.servicio_2{
-	width: 100%;
-	background-color: pink;
-	height: 80vh;
+	background-color:springgreen;
 }
 
 .servicio_seo_body.servicio_3{
 	background-color: green;
-	height: 80vh;
 }
 
 .servicio_juntos{
@@ -454,6 +467,9 @@
 	font-weight: bold;
 }
 
+.container_imagen{
+   
+}
 
 
 /*----------------- NOSOTROS ------------------*/

@@ -19,8 +19,8 @@
 		</div>
 	</header>
 
-	<section class="nosotros_quien">
-		
+	<section class="nosotros_quien" style="color: #fff">
+		¡Imagen del equipo o algo que refleje quienes somos!
 	</section>
 
 	<section class="servicio_juntos">
