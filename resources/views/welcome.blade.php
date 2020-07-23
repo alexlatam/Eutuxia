@@ -561,23 +561,9 @@
   </div>
     <!-- Section Image PC Dinamic -->
     <div class="container content_section">
-      <br><br><br>
+      <br>
     </div>
-    <!-- Section Paper Dinamic2 -->
-    <div class="row center-align" id="papers2" style="background-color:#444;">
-      <div class="col s12">
-        <input type="hidden" id="input_pappers2" v-model="inputValue2">
-        <button hidden type="hidden" id="buttonPappers2" v-on:click="expandPapper2"></button>
-      </div>
-      <div class="row">
-          <div class="col s1" v-for="papper of pappers" style="padding:0px;width:50px;height:50px;">
-            <div class="contenedor_card">
-              <div :class="papper.class" style="width:50%;margin:0px;">
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+    
     <script>
       var input2=document.getElementById('input_pappers2');
       //Cada 5s cambio el valor del input
@@ -683,7 +669,7 @@
         })
     </script>
    
-    <div class="container" style="margin-top:7rem;">
+   <div class="container" style="margin-top:7rem;">
     <div class="row center-align">
       <h3 class="center-align" style="margin-bottom:6rem;">Algunas de las tecnologias que usamos</h3>
       <div class="col s3" style="margin-bottom:4rem;">
@@ -712,6 +698,13 @@
       </div>
     </div>
     </div>
+    {{-- trabajemos juntos --}}
+    <section class="servicio_juntos">
+      <div class="servicio_juntos_body" >
+        <h2>Trabajemos juntos</h2>
+       <a class="waves-effect waves-light indigo darken-4 btn" style="padding: 0 3rem; color:white">Empezar con nosotros</a>
+      </div>
+    </section>
   <!-- footer -->
   <section style="background-color: #171347">
     <div class="fotter_container">
