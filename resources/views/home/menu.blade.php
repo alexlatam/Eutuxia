@@ -94,7 +94,7 @@
   </ul> --}}
   <!-- Menu superior -->
   <nav class="navbar_ppal" role="navigation">
-    <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Eutuxia</a>
+    <div class="nav-wrapper"><a id="logo-container" href="/" class="brand-logo">Eutuxia</a>
       <ul class="right hide-on-med-and-down">
         <li>
           <a class="dropdown-trigger waves-effect waves-light btn-flat white-text" style="padding:0px 0.7rem!important;margin:0px!important;" href="/productos" data-target="dropdown1" style="padding:0px;margin:0px;">Productos
