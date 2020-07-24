@@ -760,16 +760,16 @@
             <h6 class="title_footer">Productos</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Página Web Empresarial</a>
+            <a class="enlace_footer" href="/productos">Página Web Empresarial</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Aplicación Web</a>
+            <a class="enlace_footer" href="/producto">Aplicación Web</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Blog</a>
+            <a class="enlace_footer" href=/producto"">Blog</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Tienda Virtual</a>
+            <a class="enlace_footer" href="/producto">Tienda Virtual</a>
           </div>
         </div>
         <div class="col s2">
@@ -777,19 +777,19 @@
             <h6 class="title_footer">Servicios</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Marketing</a>
+            <a class="enlace_footer" href="/servicios">Marketing</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">SEO</a>
+            <a class="enlace_footer" href="/servicios">SEO</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Branding</a>
+            <a class="enlace_footer" href="/servicios">Branding</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Desarrollo</a>
+            <a class="enlace_footer" href="/servicios">Desarrollo</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Diseño Digital</a>
+            <a class="enlace_footer" href="/servicios">Diseño Digital</a>
           </div>
         </div>
         <div class="col s2">
@@ -797,16 +797,16 @@
             <h6 class="title_footer">Mapa del sitio</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Inicio</a>
+            <a class="enlace_footer" href="/nosotros">Inicio</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Proyecto</a>
+            <a class="enlace_footer" href="/nosotros">Proyecto</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Premios</a>
+            <a class="enlace_footer" href="/nosotros">Premios</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Contacto</a>
+            <a class="enlace_footer" href="/nosotros">Contacto</a>
           </div>
         </div>
       </div>
