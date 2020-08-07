@@ -4,12 +4,14 @@
 @section('content')
 <section>
 
-  @if(session('message'))
+
+  @if(session('error'))
         <div class="alert alert-danger my-3" role="alert">
-          {{session('message')}}
+          {{session('error')}}
         </div>
   @endif
-  <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>Productos</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
         <a href="{{route('producto.crear')}}" type="button" class="btn btn-sm btn-outline-success">Agregar Productos</a>
@@ -31,14 +33,17 @@
       <tbody>
         @foreach($products as $product)
           <tr>
-            <td>{{$product->imagen}}</td>
+            <td>{{$product->id}}</td>
+            <td>
+              <img src="{{asset('storage/'. $product->imagen)}}" width="50">
+            </td>
             <td>{{$product->product}}</td>
-            <td>vacia por ahora</td>
+            <td>{{$product->section->section}}</td>
             <td class="d-flex ">
-              <button type="button" id="" class="btn btn-sm btn-outline-success mr-2 editar"  data-toggle="modal" data-target="#modalCategoriaEditar">Editar</button>
-              <form action="/cms/membresia/delete" method="POST">
+              <a href="{{route('producto.editar', $product->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
+              <form action="{{route('producto.delete', $product->id)}}" method="POST">
                 @csrf
-                <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-success">
+                <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">
               </form>
             </td>
           </tr>

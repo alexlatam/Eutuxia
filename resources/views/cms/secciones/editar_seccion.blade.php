@@ -18,19 +18,17 @@
       {{session('message')}}
     </div>
     @endif
-    <form action="{{route('producto.actualizar', $product->id)}}" id="form" method="POST" enctype="multipart/form-data">
+    <form action="/cms/guardar/servicio" id="form" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <div class="col-12 mb-4">
           <h5>Producto</h5>
-          <input class="form-control" id="input-title" type="text" name="product" value="{{$product->product}}" placeholder="Titulo" maxlength="191">
+          <input class="form-control" id="input-title" type="text" name="product_name" value="" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
           <h5>Sección</h5>
-          <select class="form-control" name="section_id">
-            @foreach($secciones as $seccion)
-              <option value="{{$seccion->id}}" <?php if($seccion->id ==$product->section->id) echo 'selected' ?> >{{$seccion->section}}</option>
-            @endforeach
+          <select class="form-control" name="product_section">
+            <option>Agregar Sección</option>
           </select>
         </div>
         <div class="col-12 mb-4">

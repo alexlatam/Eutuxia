@@ -5,7 +5,7 @@
 <section>
 
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Editar Productos</h1>
+    <h1 class="h2">Crear Productos</h1>
     <div class="btn-group mr-2">
       <a href="{{route('producto.home')}}" type="button" class="btn btn-sm btn-outline-success px-4">Volver</a>
     </div>
@@ -18,19 +18,17 @@
       {{session('message')}}
     </div>
     @endif
-    <form action="{{route('producto.actualizar', $product->id)}}" id="form" method="POST" enctype="multipart/form-data">
+    <form action="" id="form" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <div class="col-12 mb-4">
           <h5>Producto</h5>
-          <input class="form-control" id="input-title" type="text" name="product" value="{{$product->product}}" placeholder="Titulo" maxlength="191">
+          <input class="form-control" id="input-title" type="text" name="product_name" value="" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
           <h5>Sección</h5>
-          <select class="form-control" name="section_id">
-            @foreach($secciones as $seccion)
-              <option value="{{$seccion->id}}" <?php if($seccion->id ==$product->section->id) echo 'selected' ?> >{{$seccion->section}}</option>
-            @endforeach
+          <select class="form-control" name="product_section">
+            <option>Agregar Sección</option>
           </select>
         </div>
         <div class="col-12 mb-4">

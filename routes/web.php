@@ -21,12 +21,32 @@ Route::get('/cms', function () {
 
 Route::prefix('cms')->group(function () {
 
+
+	//-------------- PRODUCTOS ----------------
+
 	Route::get('/productos', 'Cms\ProductController@index')->name('producto.home');
 	Route::get('/crear/producto', 'Cms\ProductController@crearProducto')->name('producto.crear');
-	Route::get('/editar/producto/{id}', 'Cms\ProductController@editarProducto');
+	Route::get('/editar/producto/{id}', 'Cms\ProductController@editarProducto')->name('producto.editar');
 
+
+		//metodo posts
+	Route::post('/guardar/product', 'Cms\ProductController@guardarProducto')->name('producto.guardar');
+	Route::post('/actualizar/producto/{id}', 'Cms\ProductController@actualizarProducto')->name('producto.actualizar');
+	Route::post('/eliminar/producto/{id}', 'Cms\ProductController@eliminarProducto')->name('producto.delete');
+
+
+	//-------------- SECCIONES ----------------
+	Route::get('/secciones', 'Cms\SectionController@index')->name('section.home');
+	Route::get('/seccion/obtener/{id}', 'Cms\SectionController@obtenerSeccion');
+
+		//métodos post
+	Route::post('/crear/seccion', 'Cms\SectionController@guardarSeccion')->name('seccion.crear');
+	Route::post('/actualizar/section/{id}', 'Cms\SectionController@actualizarSeccion');
+	Route::post('/eliminar/section/{id}', 'Cms\SectionController@eliminarSeccion')->name('seccion.eliminar');
+
+
+	//-------------- PRODUCTS BANNERS ----------------
 	Route::get('/product/banners', 'Cms\ProductBannerController@index');
-
 });
 
 

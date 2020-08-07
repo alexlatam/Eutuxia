@@ -18,17 +18,20 @@
       {{session('message')}}
     </div>
     @endif
-    <form action="" id="form" method="POST" enctype="multipart/form-data">
+    <form action="{{route('producto.guardar')}}" id="form" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <div class="col-12 mb-4">
           <h5>Producto</h5>
-          <input class="form-control" id="input-title" type="text" name="product_name" value="" placeholder="Titulo" maxlength="191">
+          <input class="form-control" id="input-title" type="text" name="product" value="" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
           <h5>Sección</h5>
-          <select class="form-control" name="product_section">
+          <select class="form-control" name="section_id">
             <option>Agregar Sección</option>
+            @foreach($secciones as $seccion)
+              <option value="{{$seccion->id}}">{{$seccion->section}}</option>
+            @endforeach
           </select>
         </div>
         <div class="col-12 mb-4">
