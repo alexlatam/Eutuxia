@@ -9,10 +9,11 @@
           {{session('message')}}
         </div>
   @endif
-  <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>Nombre producto</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
-        <a href="{{route('producto.crear')}}" type="button" class="btn btn-sm btn-outline-success">Agregar Productos</a>
+        <a href="#" type="button" class="btn btn-sm btn-outline-success" data-toggle="modal" data-target="#modalCategoria">Agregar banner</a>
       </div>
     </div>
   </div>
@@ -21,19 +22,16 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-          <th>#</th>
           <th>Imagen</th>
-          <th>Producto</th>
-          <th>Seccion</th>
+          <th>titulo</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        @foreach($products as $product)
+        @foreach($banners as $banner)
           <tr>
-            <td>{{$product->imagen}}</td>
-            <td>{{$product->product}}</td>
-            <td>vacia por ahora</td>
+            <td>{{$banner->imagen}}</td>
+            <td>{{$banner->title}}</td>
             <td class="d-flex ">
               <button type="button" id="" class="btn btn-sm btn-outline-success mr-2 editar"  data-toggle="modal" data-target="#modalCategoriaEditar">Editar</button>
               <form action="/cms/membresia/delete" method="POST">

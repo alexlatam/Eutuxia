@@ -17,9 +17,18 @@ Route::get('/cms', function () {
 	return view('cms.index');
 });
 
-Route::get('/cms/productos', function() {
-	return view('cms.productos.productos');
+
+
+Route::prefix('cms')->group(function () {
+
+	Route::get('/productos', 'Cms\ProductController@index')->name('producto.home');
+	Route::get('/crear/producto', 'Cms\ProductController@crearProducto')->name('producto.crear');
+	Route::get('/editar/producto/{id}', 'Cms\ProductController@editarProducto');
+
+	Route::get('/product/banners', 'Cms\ProductBannerController@index');
+
 });
+
 
 
 Route::get('/', function () {

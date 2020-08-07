@@ -59,6 +59,12 @@
                 Inicio
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('producto.home')}}">
+                <span data-feather="home"></span>
+                Productos
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
