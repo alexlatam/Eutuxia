@@ -17,6 +17,10 @@ Route::get('/cms', function () {
 	return view('cms.index');
 });
 
+Route::get('/cms/productos', function() {
+	return view('cms.productos.productos');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
