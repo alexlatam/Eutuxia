@@ -21,6 +21,17 @@ Route::get('/cms', function () {
 
 Route::prefix('cms')->group(function () {
 
+	//-------------- SERvICIOS ----------------
+	Route::get('/servicios', 'Cms\ServicioController@index')->name('service.home');
+	Route::get('/crear/servicio', 'Cms\ServicioController@crearServicio')->name('service.create');
+	Route::get('/editar/servicio/{id}', 'Cms\ServicioController@editarServicio')->name('service.show');
+
+
+		//metodos posts
+
+	Route::post('/guardar/servicio', 'Cms\ServicioController@guardarServicio')->name('service.store');
+	Route::post('/actualizar/servicio/{id}', 'Cms\ServicioController@actualizarServicio')->name('service.update');
+	Route::post('/eliminar/servicio/{id}', 'Cms\ServicioController@eliminarServicio')->name('service.destroy');
 
 	//-------------- PRODUCTOS ----------------
 

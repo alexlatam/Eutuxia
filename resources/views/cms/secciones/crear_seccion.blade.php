@@ -36,7 +36,7 @@
           <input type="file" name="product_image">
         </div>
         <div class="col-12 mb-5">
-          <a href="/cms/servicios/tecnicos" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
+          <a href="{{route('producto.home')}}" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
           <input type="submit" id="submit_button" class="btn btn-success px-5" value="Crear Servicio">
         </div>
       </div>

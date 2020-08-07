@@ -75,6 +75,12 @@
                 Secciones
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('service.home')}}">
+                <span data-feather="home"></span>
+                Servicios
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
