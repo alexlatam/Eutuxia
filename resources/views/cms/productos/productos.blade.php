@@ -41,6 +41,7 @@
             <td>{{$product->section->section}}</td>
             <td class="d-flex ">
               <a href="{{route('producto.editar', $product->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
+              <a href="{{route('banners.product', $product->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Banners</a>
               <form action="{{route('producto.delete', $product->id)}}" method="POST">
                 @csrf
                 <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">

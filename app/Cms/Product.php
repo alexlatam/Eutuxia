@@ -15,4 +15,9 @@ class Product extends Model
     {
     	return $this->belongsTo('App\Cms\Section', 'section_id');
     }
+
+    public function banners()
+    {
+    	return $this->hasMany('App\Cms\ProductBanner');
+    }
 }

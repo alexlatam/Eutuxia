@@ -38,8 +38,8 @@
           <input type="file" name="product_image">
         </div>
         <div class="col-12 mb-5">
-          <a href="/cms/servicios/tecnicos" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
-          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Crear Servicio">
+          <a href="#" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
+          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Editar Producto">
         </div>
       </div>
     </form>

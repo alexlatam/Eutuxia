@@ -64,7 +64,15 @@ Route::prefix('cms')->group(function () {
 
 
 	//-------------- PRODUCTS BANNERS ----------------
-	Route::get('/product/banners', 'Cms\ProductBannerController@index');
+	Route::get('/banners/product/{id}', 'Cms\ProductBannerController@index')->name('banners.product');
+	Route::get('/banner/product/create', 'Cms\ProductBannerController@crearBannerProducto')->name('banners.product.create');
+	Route::get('/banner/product/edit/{id}', 'Cms\ProductBannerController@editarBannerProducto')->name('banner.product.show');
+
+		//metodos posts
+	Route::post('/banner/product/guardar', 'Cms\ProductBannerController@guardarBannerProducto')->name('banners.product.store');
+	Route::post('/banner/product/update/{id}', 'Cms\ProductBannerController@actualizarBannerProducto')->name('banner.product.update');
+	Route::post('/banner/producto/eliminar/{id}', 'Cms\ProductBannerController@eliminarBannerProducto')->name('banner.product.destroy');
+
 });
 
 
