@@ -17,7 +17,7 @@ class CreateServiceBannersTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('cta');
+            $table->string('cta')->nullable();
             $table->string('imagen');
             $table->foreignId('service_id');
             $table->timestamps();
