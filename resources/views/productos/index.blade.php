@@ -70,4 +70,6 @@
 		<h2>Trabaja con nosotros</h2>
 		<a href="#">Contactanos</a>
 	</section>
+	<!-- Float Bottom -->
+	@include('home.float_button')
 @endsection
