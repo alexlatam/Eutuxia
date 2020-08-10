@@ -64,15 +64,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('producto.home')}}">
-                <span data-feather="home"></span>
-                Productos
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{{route('section.home')}}">
                 <span data-feather="home"></span>
                 Secciones
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('producto.home')}}">
+                <span data-feather="home"></span>
+                Productos
               </a>
             </li>
             <li class="nav-item">

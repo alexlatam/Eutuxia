@@ -35,7 +35,7 @@ class ServicioController extends Controller
 
     	Service::create([
     		'service' => $request->service,
-    		'section_id' => $request->section_id,
+    		'section_id' => 2,
     		'imagen' => $file
     	]);
 
@@ -66,7 +66,6 @@ class ServicioController extends Controller
 
     			$servicio->update([
     				'service' => $request->service,
-    				'section_id' => $request->section_id,
     				'imagen' => $file
     			]);
 
@@ -75,7 +74,6 @@ class ServicioController extends Controller
     	} else {
     		$servicio->update([
     			'service' => $request->service,
-    			'section_id' => $request->section_id,
     		]);
 
     		return back()->with('message', 'Servicio actualizado con éxito');

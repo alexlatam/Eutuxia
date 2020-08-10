@@ -26,14 +26,6 @@
           <input class="form-control" id="input-title" type="text" name="product" value="{{$product->product}}" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
-          <h5>Sección</h5>
-          <select class="form-control" name="section_id">
-            @foreach($secciones as $seccion)
-              <option value="{{$seccion->id}}" <?php if($seccion->id ==$product->section->id) echo 'selected' ?> >{{$seccion->section}}</option>
-            @endforeach
-          </select>
-        </div>
-        <div class="col-12 mb-4">
           <h5>Imagen</h5>
           <input type="file" name="product_image">
         </div>

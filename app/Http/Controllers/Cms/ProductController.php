@@ -37,7 +37,7 @@ class ProductController extends Controller
 		$producto->create([
 			'product' => $request['product'],
 			'imagen' => $file,
-			'section_id' => $request['section_id']
+			'section_id' => 1
 		]);
 
 		return back()->with('message', 'Producto creado con éxito');
@@ -67,7 +67,6 @@ class ProductController extends Controller
 
 				$product->update([
 					'product' => $request->product,
-					'section_id' => $request->section_id,
 					'imagen' => $file
 				]);
 
@@ -76,7 +75,6 @@ class ProductController extends Controller
 		} else {
 			$product->update([
 				'product' => $request->product,
-				'section_id' => $request->section_id,
 			]);
 
 			return back()->with('message', 'Producto actualizado con éxito');

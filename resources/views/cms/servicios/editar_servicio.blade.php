@@ -26,20 +26,12 @@
           <input class="form-control" id="input-title" type="text" name="service" value="{{$servicio->service}}" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
-          <h5>Sección</h5>
-          <select class="form-control" name="section_id">
-            @foreach($secciones as $seccion)
-              <option value="{{$seccion->id}}" <?php if($seccion->id ==$servicio->section->id) echo 'selected' ?> >{{$seccion->section}}</option>
-            @endforeach
-          </select>
-        </div>
-        <div class="col-12 mb-4">
           <h5>Imagen</h5>
           <input type="file" name="service_image">
         </div>
         <div class="col-12 mb-5">
           <a href="{{route('service.home')}}" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
-          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Crear Servicio">
+          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Editar Servicio">
         </div>
       </div>
     </form>

@@ -40,7 +40,7 @@ class ProjectController extends Controller
 
     	$project->create([
     		'project' => $request->project,
-    		'section_id' => $request->section_id,
+    		'section_id' => 3,
     		'imagen' => $file, 
     	]);
 
@@ -75,7 +75,6 @@ class ProjectController extends Controller
 
     	        $project->update([
     	        	'project' => $request->project,
-    	        	'section_id' => $request->section_id,
     	        	'imagen' => $file, 
     	        ]);
     	        
@@ -90,7 +89,6 @@ class ProjectController extends Controller
 
     	    $project->update([
     	    	'project' => $request->project,
-    	    	'section_id' => $request->section_id, 
     	    ]);
 
     	    return back()->with('message', 'Proyecto actualizado correctamente');

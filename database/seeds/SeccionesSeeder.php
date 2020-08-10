@@ -22,18 +22,6 @@ class SeccionesSeeder extends Seeder
         ]);
 
         DB::table('sections')->insert([
-        	'section' => 'nosotros',
-        ]);
-
-        DB::table('sections')->insert([
-        	'section' => 'blog',
-        ]);
-
-        DB::table('sections')->insert([
-        	'section' => 'contactanos',
-        ]);
-
-        DB::table('sections')->insert([
         	'section' => 'proyectos',
         ]);
     }
