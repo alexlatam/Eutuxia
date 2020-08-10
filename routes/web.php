@@ -50,6 +50,19 @@ Route::prefix('cms')->group(function () {
 	Route::post('/eliminar/producto/{id}', 'Cms\ProductController@eliminarProducto')->name('producto.delete');
 
 
+	//-------------- PROYECTOS ----------------
+
+	Route::get('/proyectos', 'Cms\ProjectController@index')->name('project.home');
+	Route::get('/proyectos/create', 'Cms\ProjectController@crearProyecto')->name('project.create');
+	Route::get('/proyectos/editar/{id}', 'Cms\ProjectController@editarProyecto')->name('project.show');
+		//metodos posts
+
+	Route::post('/proyectos/guardar', 'Cms\ProjectController@guardarProyecto')->name('project.store');
+	Route::post('/proyectos/actualizar/{id}', 'Cms\ProjectController@actualizarProyecto')->name('project.update');
+	Route::post('/proyectos/eliminar/{id}', 'Cms\ProjectController@eliminarProyecto')->name('project.delete');
+
+
+
 	//-------------- SECCIONES ----------------
 	Route::get('/secciones', 'Cms\SectionController@index')->name('section.home');
 
@@ -72,6 +85,9 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banner/product/guardar', 'Cms\ProductBannerController@guardarBannerProducto')->name('banners.product.store');
 	Route::post('/banner/product/update/{id}', 'Cms\ProductBannerController@actualizarBannerProducto')->name('banner.product.update');
 	Route::post('/banner/producto/eliminar/{id}', 'Cms\ProductBannerController@eliminarBannerProducto')->name('banner.product.destroy');
+
+
+
 
 });
 
