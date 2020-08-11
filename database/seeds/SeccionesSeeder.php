@@ -14,15 +14,15 @@ class SeccionesSeeder extends Seeder
     public function run()
     {
         DB::table('sections')->insert([
-        	'section' => 'productos',
+        	'section' => 'Productos',
         ]);
 
         DB::table('sections')->insert([
-        	'section' => 'servicios',
+        	'section' => 'Servicios',
         ]);
 
         DB::table('sections')->insert([
-        	'section' => 'proyectos',
+        	'section' => 'Proyectos',
         ]);
     }
 }
