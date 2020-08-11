@@ -11,10 +11,10 @@
         </div>
   @endif
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1>Servicios</h1>
+    <h1>Banners de servicios</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
-        <a href="{{route('service.create')}}" type="button" class="btn btn-sm btn-outline-success">Agregar Servicio</a>
+        <a href="{{route('banner.service.create', $service->id)}}" type="button" class="btn btn-sm btn-outline-success">Crear Banner</a>
       </div>
     </div>
   </div>
@@ -25,24 +25,23 @@
         <tr>
           <th>#</th>
           <th>Imagen</th>
-          <th>Servicio</th>
-          <th>Seccion</th>
+          <th>titulo</th>
+          <th>servicio</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        @foreach($servicios as $servicio)
+        @foreach($banners as $banner)
           <tr>
-            <td>{{$servicio->id}}</td>
+            <td>{{$banner->id}}</td>
             <td>
-              <img src="{{asset('storage/'. $servicio->imagen)}}" width="50">
+              <img src="{{asset('storage/'. $banner->imagen)}}" width="50">
             </td>
-            <td>{{$servicio->service}}</td>
-            <td>{{$servicio->section->section}}</td>
+            <td>{{$banner->title}}</td>
+            <td>{{$banner->service->service}}</td>
             <td class="d-flex ">
-              <a href="{{route('service.show', $servicio->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
-              <a href="{{route('banners.service', $servicio->id)}}" class="btn btn-sm btn-outline-success mr-2" >Banners</a>
-              <form action="{{route('service.destroy', $servicio->id)}}" method="POST">
+              <a href="{{route('banner.service.show', array($service->id, $banner->id))}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
+              <form action="{{route('banner.servicio.destroy', $banner->id)}}" method="POST">
                 @csrf
                 <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">
               </form>

@@ -86,9 +86,15 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banner/product/update/{id}', 'Cms\ProductBannerController@actualizarBannerProducto')->name('banner.product.update');
 	Route::post('/banner/producto/eliminar/{id}', 'Cms\ProductBannerController@eliminarBannerProducto')->name('banner.product.destroy');
 
+	//-------------- SERVICES BANNERS ----------------
+	Route::get('/banners/service/{id}', 'Cms\ServiceBannerController@index')->name('banners.service');
+	Route::get('/banners/service/create/{id}', 'Cms\ServiceBannerController@crearBannerServicio')->name('banner.service.create');
+	Route::get('/banner/service/{service}/edit/{id}', 'Cms\ServiceBannerController@editarBannerServicio')->name('banner.service.show');
 
-
-
+		//metodos posts
+	Route::post('/banners/service/guardar', 'Cms\ServiceBannerController@guardarBannerServicio')->name('banner.service.store');
+	Route::post('/banner/service/update/{id}', 'Cms\ServiceBannerController@actualizarBannerServicio')->name('banner.service.update');
+	Route::post('/banner/service/delete/{id}', 'Cms\ServiceBannerController@eliminarBannersServicio')->name('banner.servicio.destroy');
 });
 
 
