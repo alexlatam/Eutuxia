@@ -95,6 +95,18 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banners/service/guardar', 'Cms\ServiceBannerController@guardarBannerServicio')->name('banner.service.store');
 	Route::post('/banner/service/update/{id}', 'Cms\ServiceBannerController@actualizarBannerServicio')->name('banner.service.update');
 	Route::post('/banner/service/delete/{id}', 'Cms\ServiceBannerController@eliminarBannersServicio')->name('banner.servicio.destroy');
+
+
+	//-------------- PROJECTS BANNERS ----------------
+	Route::get('/banners/project/{id}', 'Cms\ProjectBannerController@index')->name('banners.project');
+	Route::get('/banners/project/create/{id}', 'Cms\ProjectBannerController@crearBannerProyecto')->name('banner.project.create');
+	Route::get('/banner/project/{proyecto}/edit/{id}', 'Cms\ProjectBannerController@editarBannerProyecto')->name('banner.project.show');
+
+		//metodos posts
+	Route::post('/banners/project/guardar', 'Cms\ProjectBannerController@guardarBannerProyecto')->name('banner.project.store');
+	Route::post('/banners/project/update/{id}', 'Cms\ProjectBannerController@actualizarBannerProyecto')->name('banner.project.update');
+	Route::post('/banners/project/delete/{id}', 'Cms\ProjectBannerController@eliminarBannersProject')->name('banner.project.destroy');
+
 });
 
 

@@ -5,9 +5,9 @@
 <section>
 
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Editar Banner de Producto</h1>
+    <h1 class="h2">Editar Banner de Proyecto</h1>
     <div class="btn-group mr-2">
-      <a href="{{route('banners.product', $producto)}}" type="button" class="btn btn-sm btn-outline-success px-4">Volver</a>
+      <a href="{{route('banners.project', $proyecto)}}" type="button" class="btn btn-sm btn-outline-success px-4">Volver</a>
     </div>
   </div>
     
@@ -20,9 +20,9 @@
     @endif
 
         <div class="banner_card_main">
-                <form action="{{route('banner.product.update', $banner->id)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('banner.project.update', $banner->id)}}" method="POST" enctype="multipart/form-data">
                   @csrf
-                  <input type="hidden" name="product_id" value="{{$producto}}">
+                  <input type="hidden" name="project_id" value="{{$proyecto}}">
                   <div class="row">
                     <div class="form-group col-6">
                       <h5>Titulo</h5>

@@ -41,7 +41,7 @@
             <td>{{$project->section->section}}</td>
             <td class="d-flex ">
               <a href="{{route('project.show', $project->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
-              <a href="#"  class="btn btn-sm btn-outline-success mr-2 editar">Banners</a>
+              <a href="{{route('banners.project', $project->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Banners</a>
               <form action="{{route('project.delete', $project->id)}}" method="POST">
                 @csrf
                 <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">
