@@ -19,14 +19,14 @@ class ProductBannerController extends Controller
         $product = Product::find($id);
 
     	$banners = $product->banners;
-    	return view('cms.banners_productos.banners_producto')->with(compact('banners'));
+    	return view('cms.banners_productos.banners_producto')->with(compact('banners', 'product'));
     }
 
-    public function crearBannerProducto()
+    public function crearBannerProducto(Request $request, $id)
     {
     	
-    	$productos = Product::all();
-    	return view('cms.banners_productos.crear_banner_producto')->with(compact('productos'));
+    	$producto = $id;
+    	return view('cms.banners_productos.crear_banner_producto')->with(compact('producto'));
     }
 
     public function guardarBannerProducto(Request $request)
@@ -47,12 +47,12 @@ class ProductBannerController extends Controller
         return back()->with('message', 'Banner de producto creado con éxito');
     }
 
-    public function editarBannerProducto($id)
+    public function editarBannerProducto($product, $id)
     {
-        $productos = Product::all();
+        $producto = $product;
         $banner = ProductBanner::find($id);
 
-        return view('cms.banners_productos.editar_banner_producto')->with(compact('productos', 'banner'));
+        return view('cms.banners_productos.editar_banner_producto')->with(compact('producto', 'banner'));
     }
 
 

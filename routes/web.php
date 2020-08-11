@@ -78,8 +78,8 @@ Route::prefix('cms')->group(function () {
 
 	//-------------- PRODUCTS BANNERS ----------------
 	Route::get('/banners/product/{id}', 'Cms\ProductBannerController@index')->name('banners.product');
-	Route::get('/banner/product/create', 'Cms\ProductBannerController@crearBannerProducto')->name('banners.product.create');
-	Route::get('/banner/product/edit/{id}', 'Cms\ProductBannerController@editarBannerProducto')->name('banner.product.show');
+	Route::get('/banner/product/create/{id}', 'Cms\ProductBannerController@crearBannerProducto')->name('banners.product.create');
+	Route::get('/banner/product/{product}/edit/{id}', 'Cms\ProductBannerController@editarBannerProducto')->name('banner.product.show');
 
 		//metodos posts
 	Route::post('/banner/product/guardar', 'Cms\ProductBannerController@guardarBannerProducto')->name('banners.product.store');

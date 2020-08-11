@@ -14,7 +14,7 @@
     <h1>Banners de productos</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
-        <a href="{{route('banners.product.create')}}" type="button" class="btn btn-sm btn-outline-success">Crear Banner</a>
+        <a href="{{route('banners.product.create', $product->id)}}" type="button" class="btn btn-sm btn-outline-success">Crear Banner</a>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
             <td>{{$banner->title}}</td>
             <td>{{$banner->product->product}}</td>
             <td class="d-flex ">
-              <a href="{{route('banner.product.show', $banner->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
+              <a href="{{route('banner.product.show', array($product->id, $banner->id))}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
               <form action="{{route('banner.product.destroy', $banner->id)}}" method="POST">
                 @csrf
                 <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">

@@ -7,7 +7,7 @@
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Crear Banner de Producto</h1>
     <div class="btn-group mr-2">
-      <a href="#" type="button" class="btn btn-sm btn-outline-success px-4">Volver</a>
+      <a href="{{route('banners.product', $producto)}}" type="button" class="btn btn-sm btn-outline-success px-4">Volver</a>
     </div>
   </div>
     
@@ -20,49 +20,46 @@
     @endif
 
     <div class="banner_card_main">
-        <div class="row">
-          <div class="col-5">
             <form action="{{route('banners.product.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
-              <div class="form-group">
-                <h5>Titulo</h5>
-                <input class="form-control" type="text" name="title">
-              </div>
-              <div class="form-group">
-                <h5>Contenido</h5>
-                <textarea class="form-control" name="subtitle"></textarea>
-              </div>
-              <div class="form-group">
-                <h5>Productos</h5>
-                <select class="form-control" name="product_id">
-                  <option>Selecciona un producto</option>
-                  @foreach($productos as $producto)
-                    <option value="{{$producto->id}}">{{$producto->product}}</option>
-                  @endforeach
-                </select>
-              </div>
-              <div class="form-group">
-                <h5>Imagen</h5>
-                <input type="file" class="b_file" name="banner_imagen">
-              </div>
-              <div class="form-group">
-                <input class="btn btn-success" type="submit" value="Crear Banner">
+              <input type="hidden" name="product_id" value="{{$producto}}">
+              <div class="row">
+                <div class="form-group col-6">
+                  <h5>Titulo</h5>
+                  <input id="title_banner" class="form-control" type="text" name="title">
+                </div>
+                <div class="form-group col-6">
+                  <h5>Imagen</h5>
+                  <input type="file" class="b_file" name="banner_imagen">
+                </div>
+                <div class="form-group col-12">
+                  <h5>Contenido</h5>
+                  <textarea class="form-control" id="content_banner" name="subtitle"></textarea>
+                </div>
+                <div class="form-group col-4">
+                  <input class="btn btn-success" type="submit" value="Crear Banner">
+                </div>
               </div>
             </form>
-          </div>
-          <div class="col-7">
-            <img src="" style="max-width: 610px; height: 400px; object-fit: cover;" id="imagen_banner">
-          </div>
-        </div>
     </div>
 </section>
+
+
+
+@include('cms.banner_template.template')
+
+
+
+
 <script type="text/javascript">
   let banner_inputs = document.querySelectorAll('.b_file');
   console.log(banner_inputs)
 
   banner_inputs.forEach(input => {
     input.onchange = function (e){
-      let imgContainer = imagen_banner;
+      let imgContainer = document.getElementById('image_banner');
+
+      console.log(imgContainer)
 
 
       let reader = new FileReader();
@@ -74,6 +71,24 @@
 
     }
   });
+</script>
+
+<script type="text/javascript">
+  let titleBanner = document.getElementById('title_banner');
+  let contentBanner = document.getElementById('content_banner');
+
+  //template 
+
+  let t_title = document.getElementById('template_title'),
+      t_content = document.getElementById('template_content');
+
+  titleBanner.addEventListener('keyup', (e) => {
+    t_title.textContent = titleBanner.value;
+  });
+
+  contentBanner.addEventListener('keyup', (e) => {
+    t_content.textContent = contentBanner.value;
+  }); 
 </script>
 
 
