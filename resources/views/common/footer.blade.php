@@ -51,38 +51,21 @@
           <div class="row">
             <h6 class="title_footer">Productos</h6>
           </div>
+          @foreach($productos as $producto)
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Página Web Empresarial</a>
+            <a class="enlace_footer" href="{{route('product.option', $producto->id)}}">{{$producto->product}}</a>
           </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Aplicación Web</a>
-          </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Blog</a>
-          </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Tienda Virtual</a>
-          </div>
+          @endforeach
         </div>
         <div class="col s2">
           <div class="row">
             <h6 class="title_footer">Servicios</h6>
           </div>
+          @foreach($servicios->take(4) as $servicio)
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Marketing</a>
+            <a class="enlace_footer" href="{{route('service.option', $servicio->id)}}">{{$servicio->service}}</a>
           </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">SEO</a>
-          </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Branding</a>
-          </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Desarrollo</a>
-          </div>
-          <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Diseño Digital</a>
-          </div>
+          @endforeach
         </div>
         <div class="col s2">
           <div class="row">

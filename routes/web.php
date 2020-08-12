@@ -111,17 +111,13 @@ Route::prefix('cms')->group(function () {
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home');
 
-Route::get('/productos', function () {
-    return view('productos.index');
-});
 
-Route::get('/servicios', function () {
-    return view('servicios.index');
-});
+
+Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
+
+Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/nosotros', function () {
     return view('nosotros.index');
