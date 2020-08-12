@@ -19,25 +19,30 @@
     </div>
     @endif
 
+    <div>
+        <ul style="display: none;" class="alert alert-danger" id="alert_container">
+          
+        </ul>
+    </div>
         <div class="banner_card_main">
-                <form action="{{route('banner.product.update', $banner->id)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('banner.product.update', $banner->id)}}" id="form_banner" method="POST" enctype="multipart/form-data">
                   @csrf
                   <input type="hidden" name="product_id" value="{{$producto}}">
                   <div class="row">
                     <div class="form-group col-6">
                       <h5>Titulo</h5>
-                      <input id="title_banner" class="form-control" type="text" value="{{$banner->title}}" name="title">
+                      <input id="title_banner" class="form-control"  type="text" value="{{$banner->title}}" name="title">
                     </div>
                     <div class="form-group col-6">
                       <h5>Imagen</h5>
-                      <input type="file" class="b_file" name="banner_imagen">
+                      <input type="file" class="b_file" id="file_banner" name="banner_imagen">
                     </div>
                     <div class="form-group col-12">
                       <h5>Contenido</h5>
                       <textarea class="form-control" id="content_banner" name="subtitle">{{$banner->subtitle}}</textarea>
                     </div>
                     <div class="form-group col-4">
-                      <input class="btn btn-success" type="submit" value="Editar Banner">
+                      <input class="btn btn-success" type="button" id="submit_banner" value="Editar Banner">
                     </div>
                   </div>
                 </form>
@@ -76,7 +81,21 @@
     <script type="text/javascript">
       let titleBanner = document.getElementById('title_banner');
       let contentBanner = document.getElementById('content_banner');
+      let formBanner = document.getElementById('form_banner');
+      let fileBanner = document.getElementById('file_banner');
 
+      let submitBanner = document.getElementById('submit_banner');
+
+      submitBanner.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        if(!validar()){
+          return ;
+        }
+
+        formBanner.submit();
+
+      });
       //template 
 
       let t_title = document.getElementById('template_title'),
@@ -88,7 +107,41 @@
 
       contentBanner.addEventListener('keyup', (e) => {
         t_content.textContent = contentBanner.value;
-      }); 
+      });
+
+      
+
+      const validar = () => {
+        let arrayValidate = [];
+
+        if(titleBanner.value == ''){
+          arrayValidate.push('Debe agregar un titulo')
+        } if (contentBanner.value == ''){
+          arrayValidate.push('Debe agregar un contenido')
+        } if(fileBanner.files.length <= 0){
+          arrayValidate.push('Debe agregar una imagen')
+        }
+
+        if(arrayValidate.length > 0){
+          let container = document.getElementById('alert_container')
+          container.innerHTML = '';
+
+          arrayValidate.forEach(alert => {
+            container.innerHTML += `
+
+              <li>${alert}</li>
+
+            `
+          });
+
+          container.style.display = 'block';
+
+          return false;
+        } else {
+          return true;
+        }
+      }
+
     </script>
 
 @endsection

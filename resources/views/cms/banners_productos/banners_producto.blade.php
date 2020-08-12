@@ -14,6 +14,7 @@
     <h1>Banners de productos</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
+        <a href="{{route('producto.home')}}"  class="btn btn-sm btn-outline-success mr-2">Volver</a>
         <a href="{{route('banners.product.create', $product->id)}}" type="button" class="btn btn-sm btn-outline-success">Crear Banner</a>
       </div>
     </div>

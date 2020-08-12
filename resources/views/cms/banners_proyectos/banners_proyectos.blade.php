@@ -14,6 +14,7 @@
     <h1>Banners de proyectos</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
+        <a href="{{route('project.home')}}"  class="btn btn-sm btn-outline-success mr-2">Volver</a>
         <a href="{{route('banner.project.create', $project->id)}}" type="button" class="btn btn-sm btn-outline-success">Crear Banner</a>
       </div>
     </div>
