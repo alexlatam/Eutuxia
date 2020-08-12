@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Cms\Product;
+use App\Cms\Service;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -120,9 +121,13 @@ Route::get('/productos/{id}', 'HomeController@productos')->name('product.option'
 Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/nosotros', function () {
-    return view('nosotros.index');
+	$productos = Product::all();
+	$servicios = Service::all();
+    return view('nosotros.index')->with(compact('productos', 'servicios'));
 });
 
 Route::get('/contactanos', function () {
-    return view('contactanos.index');
+	$productos = Product::all();
+	$servicios = Service::all();
+    return view('contactanos.index')->with(compact('productos', 'servicios'));
 });
