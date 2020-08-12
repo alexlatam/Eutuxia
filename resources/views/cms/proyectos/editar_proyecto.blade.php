@@ -18,24 +18,84 @@
       {{session('message')}}
     </div>
     @endif
+
+    <div>
+        <ul style="display: none;" class="alert alert-danger" id="alert_container">
+          
+        </ul>
+    </div>
+
     <form action="{{route('project.update', $project->id)}}" id="form" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <div class="col-12 mb-4">
           <h5>Proyecto</h5>
-          <input class="form-control" id="input-title" type="text" name="project" value="{{$project->project}}" placeholder="Titulo" maxlength="191">
+          <input class="form-control" id="input_title" type="text" name="project" value="{{$project->project}}" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
           <h5>Imagen</h5>
-          <input type="file" name="project_imagen">
+          <input type="file" id="input_file" name="project_imagen">
         </div>
         <div class="col-12 mb-5">
           <a href="{{route('project.home')}}" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
-          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Actualizar proyecto">
+          <input type="button" id="submit_button" class="btn btn-success px-5" value="Actualizar proyecto">
         </div>
       </div>
     </form>
   </div>
 </section>
+
+<script type="text/javascript">
+  let inputTitle = document.getElementById('input_title'),
+      inputFile = document.getElementById('input_file'),
+      submitButton = document.getElementById('submit_button')
+      formularioSubmit = document.getElementById('form');
+
+
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if(!validar()){
+      return ;
+    }
+
+    formularioSubmit.submit();
+
+  });
+
+
+
+
+
+  const validar = () => {
+        let arrayValidate = [];
+        let container = document.getElementById('alert_container');
+
+
+        if(inputTitle.value == ''){
+          arrayValidate.push('Debe agregar un titulo')
+        }
+
+        if(arrayValidate.length > 0){
+          
+
+          container.innerHTML = '';
+
+          arrayValidate.forEach(alert => {
+            container.innerHTML += `
+
+              <li>${alert}</li>
+
+            `;
+
+          container.style.display = 'block';
+          });
+
+          return false;
+        } else {
+          return true;
+        }
+      }
+</script>
 
 @endsection

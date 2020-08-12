@@ -18,25 +18,87 @@
       {{session('message')}}
     </div>
     @endif
+
+    <div>
+        <ul style="display: none;" class="alert alert-danger" id="alert_container">
+          
+        </ul>
+    </div>
+
     <form action="{{route('producto.guardar')}}" id="form" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <div class="col-12 mb-4">
           <h5>Producto</h5>
-          <input class="form-control" id="input-title" type="text" name="product" value="" placeholder="Titulo" maxlength="191">
+          <input class="form-control" id="input_title" type="text" name="product" value="" placeholder="Titulo" maxlength="191">
         </div> 
         <div class="col-12 mb-4">
           <h5>Imagen</h5>
-          <input type="file" name="product_image">
+          <input type="file" id="input_file" name="product_image">
         </div>
         <div class="col-12 mb-5">
           <a href="#" type="button" class="btn btn-outline-danger px-4 mr-4">Cancelar</a>
-          <input type="submit" id="submit_button" class="btn btn-success px-5" value="Crear producto">
+          <input type="button" id="submit_button" class="btn btn-success px-5" value="Crear producto">
         </div>
       </div>
     </form>
   </div>
 </section>
+
+
+<script type="text/javascript">
+  let inputTitle = document.getElementById('input_title'),
+      inputFile = document.getElementById('input_file'),
+      submitButton = document.getElementById('submit_button')
+      formularioSubmit = document.getElementById('form');
+
+
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if(!validar()){
+      return ;
+    }
+
+    formularioSubmit.submit();
+
+  });
+
+
+
+
+
+  const validar = () => {
+        let arrayValidate = [];
+
+        if(inputTitle.value == ''){
+          arrayValidate.push('Debe agregar un titulo')
+        } if(inputFile.files.length <= 0){
+          arrayValidate.push('Debe agregar una imagen')
+        }
+
+        if(arrayValidate.length > 0){
+          let container = document.getElementById('alert_container')
+          container.innerHTML = '';
+
+          arrayValidate.forEach(alert => {
+            container.innerHTML += `
+
+              <li>${alert}</li>
+
+            `
+          });
+
+          container.style.display = 'block';
+
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+
+</script>
 
 
 @endsection
