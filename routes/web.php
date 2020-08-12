@@ -120,6 +120,8 @@ Route::get('/productos/{id}', 'HomeController@productos')->name('product.option'
 
 Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
+Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option');
+
 Route::get('/nosotros', function () {
 	$productos = Product::all();
 	$servicios = Service::all();

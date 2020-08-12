@@ -19,6 +19,18 @@
     </li>
     @endforeach
   </ul>
+
+
+  <ul id="dropdown4" class="dropdown-content">
+    @foreach($proyectos as $proyecto)
+    <li>
+      <a href="{{route('project.option', $proyecto->id)}}" class="dropdown-item">
+        {{$proyecto->project}}
+      </a>
+    </li>
+    @endforeach
+  </ul>
+
   <!-- Dropdown Nosotros -->
   {{-- <ul id="dropdown5" class="dropdown-content">
     <li>
@@ -60,6 +72,11 @@
         </li>
         <li>
           <a class="dropdown-trigger waves-effect waves-light btn-flat white-text" style="padding:0px 0.3rem!important;margin:0px!important;" href="/servicios" data-target="dropdown3" style="padding:0px;margin:0px;">Servicios
+            <i class="material-icons right" style="margin-right:0px;">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger waves-effect waves-light btn-flat white-text" style="padding:0px 0.3rem!important;margin:0px!important;" href="/servicios" data-target="dropdown4" style="padding:0px;margin:0px;">Proyectos
             <i class="material-icons right" style="margin-right:0px;">arrow_drop_down</i>
           </a>
         </li>
