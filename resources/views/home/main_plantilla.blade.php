@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>@yield('title')</title>
+	@yield('title')
 	@include('common.head_plantilla')
 </head>
 <body>
@@ -135,6 +135,10 @@
 	  </div>
 	</section>
 	<!-- / cover -->
+
+	@yield('content')
+
+	@include('common.footer')
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
 <script src="{{asset('js/plantilla_js/vendor.js')}}"></script>
 </body>

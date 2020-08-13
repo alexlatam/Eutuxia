@@ -19,7 +19,9 @@ Route::get('/cms', function () {
 });
 
 Route::get('/test', function () {
-	return view('home.home_plantilla');
+	$productos = Product::all();
+	$servicios = Service::all();
+	return view('home')->with(compact('productos', 'servicios'));
 });
 
 
