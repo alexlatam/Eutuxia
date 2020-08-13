@@ -29,5 +29,7 @@
 			<a href="#">contactar</a>
 		</div>
 	</section>
+	<!-- Float Bottom -->
+	@include('home.float_button')
 @endsection
 </html>

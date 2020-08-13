@@ -1,67 +1,36 @@
 <!-- Dropdown prodcutos -->
-  {{-- <ul id="dropdown1" class="dropdown-content">
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">desktop_windows</i> Página Web Empresarial
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">phone_iphone</i> Aplicación Web
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">book</i> Blog
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">add_shopping_cart</i> Tienda Virtual
-      </a>
-    </li>
+   <ul id="dropdown1" class="dropdown-content">
+    @foreach($productos as $producto)
+      <li>
+        <a href="{{route('product.option', $producto->id)}}" class="dropdown-item">
+          {{$producto->product}}
+        </a>
+      </li>
+    @endforeach
   </ul>
   
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul> --}}
   <!-- Dropdown servicios -->
-  {{-- <ul id="dropdown3" class="dropdown-content">
+   <ul id="dropdown3" class="dropdown-content">
+    @foreach($servicios as $servicio)
     <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">equalizer</i> Marketing
+      <a href="{{route('service.option', $servicio->id)}}" class="dropdown-item">
+        {{$servicio->service}}
       </a>
     </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">gps_fixed</i> SEO
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">local_offer</i> Branding
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">settings_ethernet</i> Desarrollo
-      </a>
-    </li>
-    <li>
-      <a href="" class="dropdown-item">
-        <i class="material-icons">devices</i> Diseño Digital
-      </a>
-    </li>
+    @endforeach
   </ul>
+
+
   <ul id="dropdown4" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul> --}}
+    @foreach($proyectos as $proyecto)
+    <li>
+      <a href="{{route('project.option', $proyecto->id)}}" class="dropdown-item">
+        {{$proyecto->project}}
+      </a>
+    </li>
+    @endforeach
+  </ul>
+
   <!-- Dropdown Nosotros -->
   {{-- <ul id="dropdown5" class="dropdown-content">
     <li>
@@ -103,6 +72,11 @@
         </li>
         <li>
           <a class="dropdown-trigger waves-effect waves-light btn-flat white-text" style="padding:0px 0.3rem!important;margin:0px!important;" href="/servicios" data-target="dropdown3" style="padding:0px;margin:0px;">Servicios
+            <i class="material-icons right" style="margin-right:0px;">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger waves-effect waves-light btn-flat white-text" style="padding:0px 0.3rem!important;margin:0px!important;" href="/servicios" data-target="dropdown4" style="padding:0px;margin:0px;">Proyectos
             <i class="material-icons right" style="margin-right:0px;">arrow_drop_down</i>
           </a>
         </li>

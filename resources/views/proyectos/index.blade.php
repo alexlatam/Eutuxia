@@ -10,11 +10,11 @@
 	@endphp
 	<header class="servicios_header">
 		<div class="servicios_header_body">
-			<h2 class="servicios_header_title">{{$servicio->service}}</h2>
+			<h2 class="servicios_header_title">{{$proyecto->project}}</h2>
 		</div>
 	</header>
 
-	<h2 class="servicio_seo_title">{{$servicio->service}}</h2>
+	<h2 class="servicio_seo_title">{{$proyecto->project}}</h2>
 	@foreach($banners as $banner)
 	<section class="servicio_seo">
 		<div class="servicio_seo_body servicio_1">

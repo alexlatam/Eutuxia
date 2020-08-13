@@ -11,6 +11,10 @@
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
   <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
+
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <!-- Favicons -->
   <style>
     .bd-placeholder-img {
@@ -59,6 +63,30 @@
                 Inicio
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('section.home')}}">
+                <span data-feather="home"></span>
+                Secciones
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('producto.home')}}">
+                <span data-feather="home"></span>
+                Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('service.home')}}">
+                <span data-feather="home"></span>
+                Servicios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('project.home')}}">
+                <span data-feather="home"></span>
+                Proyectos
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -69,7 +97,6 @@
     </div>
   </div>
 
-  <script src="{{asset('js/input_size.js')}}"></script>
   <script src="{{asset('vendor/jquery/jquery.js')}}"></script>
   <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script type="text/javascript">
