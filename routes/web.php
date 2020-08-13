@@ -18,6 +18,10 @@ Route::get('/cms', function () {
 	return view('cms.index');
 });
 
+Route::get('/test', function () {
+	return view('home.home_plantilla');
+});
+
 
 
 Route::prefix('cms')->group(function () {
