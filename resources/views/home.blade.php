@@ -58,7 +58,73 @@
 	      <button type="button" class="btn btn-primary btn-rounded">Empezar</button>
 	    </div>
 	  </div>
-
 </div>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="row gutter-1 gutter-md-3 demo-preview">
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/portal.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/portal.jpg')}}" alt="Portal">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#">Portal</a></h5>
+          </div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/profile.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/profile.jpg')}}" alt="Profile">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#">Profile</a></h5>
+          </div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/connections.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/connections.jpg')}}" alt="Connections">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#" >Connections</a></h5>
+          </div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/groups.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/groups.jpg')}}" alt="Groups">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#">Groups</a></h5>
+          </div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/payments.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/payments.jpg')}}" alt="Payments">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#">Payments</a></h5>
+          </div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-4">
+        <article class="card card-minimal">
+          <a href="html/app/settings.html"  class="card-img-container">
+            <img class="card-img" src="{{asset('demos/settings.jpg')}}" alt="Settings">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="#">Settings</a></h5>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 @endsection

@@ -3,6 +3,10 @@
 <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet"/>
 <link href="{{asset('vendor/aos/aos.css')}}" type="text/css" rel="stylesheet"/>
 
+
+<link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}"/>
+
 <!-- fonts -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
