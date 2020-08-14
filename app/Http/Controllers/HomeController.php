@@ -15,7 +15,7 @@ class HomeController extends Controller
     	$servicios = Service::all();
     	$proyectos = Project::all();
     	$productos = Product::all();
-    	return view('welcome')->with(compact('productos', 'servicios', 'proyectos'));
+    	return view('home')->with(compact('productos', 'servicios', 'proyectos'));
     }
 
     public function productos($id){

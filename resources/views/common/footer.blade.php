@@ -51,7 +51,7 @@
           <div class="row">
             <h6 class="title_footer">Productos</h6>
           </div>
-          @foreach($productos as $producto)
+          @foreach($productos->take(4) as $producto)
           <div class="row" style="margin-bottom: 10px;">
             <a class="enlace_footer" href="{{route('product.option', $producto->id)}}">{{$producto->product}}</a>
           </div>
