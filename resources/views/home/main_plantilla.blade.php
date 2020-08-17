@@ -65,6 +65,17 @@
 	            @endforeach
 	            </div>
 	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link" href="{{asset('contactanos')}}">
+	              Contacto
+	            </a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link" href="{{asset('blog')}}">
+	              Blog
+	            </a>
+	          </li>
+
 	        </ul>
 	      </div>
 	    </nav>
@@ -78,7 +89,7 @@
 	@include('common.plantilla_footer')
 
 <script src="{{asset('vendor/jquery/jquery.js')}}"></script>
-<script src="{{asset('js/plantilla_js/app.js')}}"></script>
+{{--<script src="{{asset('js/plantilla_js/app.js')}}"></script>--}}
 <script src="{{asset('js/plantilla_js/vendor.js')}}"></script>
 </body>
 </html>

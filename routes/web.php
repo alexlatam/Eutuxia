@@ -117,7 +117,9 @@ Route::get('/', 'HomeController@home');
 
 Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
 
+Route::get('/blog', 'HomeController@blog')->name('blog');
 
+Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
 
 Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
 

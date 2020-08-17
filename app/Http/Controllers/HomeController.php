@@ -27,6 +27,22 @@ class HomeController extends Controller
         return view('contacto')->with(compact('productos', 'servicios', 'proyectos'));
     }
 
+    public function blog()
+    {
+        $servicios = Service::all();
+        $proyectos = Project::all();
+        $productos = Product::all();
+        return view('blog.index')->with(compact('productos', 'servicios', 'proyectos'));
+    }
+
+    public function blogDetail($id)
+    {
+        $servicios = Service::all();
+        $proyectos = Project::all();
+        $productos = Product::all();
+        return view('blog.blog_detail')->with(compact('productos', 'servicios', 'proyectos'));
+    }
+
     public function productos($id){
 
     	$productos = Product::all();
