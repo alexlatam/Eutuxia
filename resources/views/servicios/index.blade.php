@@ -5,6 +5,7 @@
 
 
 @section('content')
+@include('home.plantilla_header')
 	@php
 		$imagen ="https://www.conmasfuturo.com/wp-content/uploads/2014/03/objetivos-paginas-web-antoniosanjuan.jpg";	
 	@endphp

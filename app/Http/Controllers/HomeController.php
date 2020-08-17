@@ -18,6 +18,15 @@ class HomeController extends Controller
     	return view('home')->with(compact('productos', 'servicios', 'proyectos'));
     }
 
+
+    public function contactanos()
+    {
+        $servicios = Service::all();
+        $proyectos = Project::all();
+        $productos = Product::all();
+        return view('contacto')->with(compact('productos', 'servicios', 'proyectos'));
+    }
+
     public function productos($id){
 
     	$productos = Product::all();
@@ -49,6 +58,6 @@ class HomeController extends Controller
     	$proyecto = Project::find($id);
 
     	$banners = $proyecto->banners;
-    	return view('servicios.index')->with(compact('servicios', 'proyectos', 'proyecto', 'banners', 'productos'));
+    	return view('proyectos.index')->with(compact('servicios', 'proyectos', 'proyecto', 'banners', 'productos'));
     }
 }

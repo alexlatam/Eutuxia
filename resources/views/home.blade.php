@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+@include('home.plantilla_header')
 <div class="container">
 	<div class="row mt-4">
 	  <div class="col-6" style="text-align:left;">

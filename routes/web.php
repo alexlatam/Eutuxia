@@ -115,6 +115,8 @@ Route::prefix('cms')->group(function () {
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
+
 
 
 Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
@@ -130,9 +132,3 @@ Route::get('/nosotros', function () {
     return view('nosotros.index')->with(compact('productos', 'servicios', 'proyectos'));
 });
 
-Route::get('/contactanos', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-	$proyectos = Project::all();
-    return view('contactanos.index')->with(compact('productos', 'servicios', 'proyectos'));
-});
