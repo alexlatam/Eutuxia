@@ -1319,7 +1319,7 @@ pre {
   .form-control:focus {
     color: #151515;
     background-color: #fff;
-    border-color: #917ae0;
+    border-color: #8ED825;
     outline: 0;
     box-shadow: 0; }
   .form-control::placeholder {
@@ -2571,7 +2571,7 @@ input[type="button"].btn-block {
   .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 1px #fff, 0; }
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #917ae0; }
+    border-color: #8ED825; }
   .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     color: #fff;
     background-color: #b3a4ea;
@@ -2674,7 +2674,7 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
   appearance: none; }
   .custom-select:focus {
-    border-color: #917ae0;
+    border-color: #8ED825;
     outline: 0;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(145, 122, 224, 0.5); }
     .custom-select:focus::-ms-value {
@@ -2719,7 +2719,7 @@ input[type="button"].btn-block {
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-label {
-    border-color: #917ae0;
+    border-color: #8ED825;
     box-shadow: 0; }
   .custom-file-input:disabled ~ .custom-file-label {
     background-color: rgba(0, 0, 0, 0.1); }
@@ -9778,7 +9778,7 @@ a.text-rss:hover, a.text-rss:focus {
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

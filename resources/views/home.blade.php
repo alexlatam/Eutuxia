@@ -1,12 +1,37 @@
 @extends('home.main_plantilla')
 
 @section('title')
-<title>Home</title>
+<title>
+    Oxas - Desarrollamos negocios digitales
+</title>
 @endsection
 
 @section('content')
 @include('home.plantilla_header')
+
+
 <div class="container">
+
+  <div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
+	  <div class="col-6" style="padding-left:50px;">
+	    <h3 style="margin-bottom:2rem;">Landing page</h3>
+	    <p class="text_page ">
+        Una página única de tu sitio web que busca 
+        convertir a un visitante en un lead, esto es, en un usuario que ha 
+        facilitado sus datos a una empresa y que por tanto se convierte en un 
+        registro de su base de datos, haciendo posible que la empresa siga 
+        interactuando con él.
+	    </p>
+	    <button type="button" class="btn btn-primary btn-rounded">Mas Información</button>
+	  </div>
+	  <div class="col-6" style="text-align:left;">
+	    <div class="">
+	      <img src="imagen/tablet_page.png" alt="" width="100%">
+	    </div>	
+	  </div>
+	</div>
+
+
 	<div class="row mt-4">
 	  <div class="col-6" style="text-align:left;">
 	    <div class="cont_image">

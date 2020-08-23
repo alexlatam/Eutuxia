@@ -1,21 +1,39 @@
-<section class="bg-primary text-white pattern"
-    data-top-top="transform: translateY(0px);" 
-    data-top-bottom="transform: translateY(250px);">
-  <div class="container pt-10">
-    <div class="row mb-2">
-      <div class="col-md-8 col-lg-6">
-        <h1>App Pages</h1>
+<div class="swiper-container swiper-container-carousel">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-dark">
+      <div class="image" style=" background-image:url('{{asset('imagen/oxas/fondo2.jpg')}}');" ></div>
+      <div class="image band" ></div>
+      <div class="caption" data-swiper-parallax-y="-100%">
+        <div class="container">
+          <div class="row align-items-end vh-75">
+            <div class="col-md-5 text-white">
+              <span class="eyebrow mb-2">Diseño web</span>
+              <h2>Somos <br><span id="typed"></span></h2>
+              <div id="typed-strings">
+                  <p>Parte de tu Crecimiento</p>
+                  <p>Diseñadores</p>
+                  <p>Programadores</p>
+                  <p>Tus aliados</p>
+                  <p>todo lo que necesitas ...</p>
+                  
+              </div>
+              <a href="" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">App Pages</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
+    ...
   </div>
-</section>
+</div>
+<style>
+  .band{
+    background-image:url('{{asset('imagen/oxas/curva_blanca.svg')}}');
+    background-position-y: bottom;
+    bottom: -3px;
+  }
+
+</style>
+
+
+  
