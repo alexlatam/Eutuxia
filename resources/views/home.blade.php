@@ -1,4 +1,4 @@
-@extends('home.main_plantilla')
+@extends('common.main_plantilla')
 
 @section('title')
 <title>
@@ -7,11 +7,45 @@
 @endsection
 
 @section('content')
-@include('home.plantilla_header')
 
+<div class="swiper-container swiper-container-carousel">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-dark">
+      <div class="image" style=" background-image:url('{{asset('imagen/oxas/fondo2.jpg')}}');" ></div>
+      <div class="image band" ></div>
+      <div class="caption" data-swiper-parallax-y="-100%">
+        <div class="container">
+          <div class="row align-items-end vh-75">
+            <div class="col-md-5 text-white">
+              <span class="eyebrow mb-2">Diseño web</span>
+              <h2>Somos <br><span id="typed"></span></h2>
+              <div id="typed-strings">
+                  <p>Parte de tu Crecimiento</p>
+                  <p>Diseñadores</p>
+                  <p>Programadores</p>
+                  <p>Tus aliados</p>
+                  <p>todo lo que necesitas ...</p>
+                  
+              </div>
+              <a href="" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    ...
+  </div>
+</div>
+<style>
+  .band{
+    background-image:url('{{asset('imagen/oxas/curva_blanca.svg')}}');
+    background-position-y: bottom;
+    bottom: -3px;
+  }
+
+</style>
 
 <div class="container">
-
   <div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
 	  <div class="col-6" style="padding-left:50px;">
 	    <h3 style="margin-bottom:2rem;">Landing page</h3>
@@ -86,8 +120,45 @@
 	  </div>
 </div>
 
-<section class="bg-white">
-  <div class="container">
+
+    <!-- cta -->
+    <section class="text-white">
+      <div class="image image-overlay image-scrolling" style="background-image:url(images/demo/blockchain/blockchain-6.jpg)"
+        data--100-bottom-top="transform: translateY(0%);" 
+        data-top-bottom="transform: translateY(25%);">
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <span class="eyebrow">Portafolio</span>
+            <h2 class="display-4"><b>Conoce</b> nuestro trabajo.</h2>
+            <a href="" class="btn btn-rounded btn-white px-4">Ver trabajos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / cta -->
+
+
+<section class="bg-white  section-decorated-bottom">
+
+  <div class="decorated-bottom text-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40"  preserveAspectRatio="none">  
+      <path d="">
+        <animate 
+          attributeName="d" 
+          begin="0s" 
+          dur="5s"
+          repeatCount="indefinite"
+          values="
+          M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;
+          M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40 L1000,50 L0,50 L0,40 Z;
+          M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40 L1000,50 L0,50 L0,30 Z;
+          M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;"></animate>
+      </path>
+    </svg>
+  </div>
+  <div class="container ">
     <div class="row gutter-1 gutter-md-3 demo-preview">
       <div class="col-6 col-lg-4">
         <article class="card card-minimal">
@@ -154,6 +225,148 @@
 </section>
 
 
+    <!-- features -->
+    <section class="bg-primary section-decorated-bottom">
+      <div class="decorated-bottom text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40"  preserveAspectRatio="none">  
+          <path d="">
+            <animate 
+              attributeName="d" 
+              begin="0s" 
+              dur="5s"
+              repeatCount="indefinite"
+              values="
+              M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;
+              M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40 L1000,50 L0,50 L0,40 Z;
+              M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40 L1000,50 L0,50 L0,30 Z;
+              M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;"></animate>
+          </path>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-7">
+            <ul class="masonry row gutter-2" data-columns="2">
+              <li class="col-md-6 text-white" data-aos="fade-up">
+                <div class="bordered p-4">
+                  <i class="icon-weather_sun fs-50 mb-2"></i>
+                  <h4>Weather</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+              </li>
+              <li class="col-md-6 mt-5" data-aos="fade-up">
+                <div class="boxed p-4">
+                  <i class="icon-basic_globe fs-50 mb-2 text-primary"></i>
+                  <h4>Savings</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+              </li>
+              <li class="col-md-6 text-white" data-aos="fade-up">
+                <div class="bordered p-4">
+                  <i class="icon-ecommerce_cart_content fs-50 mb-2"></i>
+                  <h4>Shopping</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+              </li>
+              <li class="col-md-6 text-white" data-aos="fade-up">
+                <div class="bordered p-4">
+                  <i class="icon-basic_clockwise fs-50 mb-2"></i>
+                  <h4>Quick</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-white">
+            <h2><b>Exclusive offers</b> from our partner hotels.</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / features -->
+
+     <!-- about -->
+     <section class="bg-light pb-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="row separator-bottom pb-5 mb-5">
+              <div class="col-md-4">
+                <h2>Plan your awesome <br><b>adventure</b> today.</h2>
+              </div>
+              <div class="col-md-8">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quod quasi non nostrum nobis laudantium pariatur enim nihil animi, iusto est, ea dignissimos? Voluptas rem, necessitatibus sed sint adipisci nulla!</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="accordion-group accordion-group-minimal" data-accordion-group>
+                  <div class="accordion" data-accordion data-aos="fade-up">
+                    <div class="accordion-control" data-control>
+                      <h5>What type of ticket should I choose ?</h5>
+                    </div>
+                    <div class="accordion-content" data-content>
+                      <div class="accordion-content-wrapper">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion" data-accordion data-aos="fade-up">
+                    <div class="accordion-control" data-control>
+                      <h5>Informations about visa requirements</h5>
+                    </div>
+                    <div class="accordion-content" data-content>
+                      <div class="accordion-content-wrapper">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-2 mt-md-0">
+                <div class="accordion-group accordion-group-minimal" data-accordion-group>
+                  <div class="accordion" data-accordion data-aos="fade-up">
+                    <div class="accordion-control" data-control>
+                      <h5>What type of ticket should I choose ?</h5>
+                    </div>
+                    <div class="accordion-content" data-content>
+                      <div class="accordion-content-wrapper">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion" data-accordion data-aos="fade-up">
+                    <div class="accordion-control" data-control>
+                      <h5>Informations about visa requirements</h5>
+                    </div>
+                    <div class="accordion-content" data-content>
+                      <div class="accordion-content-wrapper">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / about -->
+
+
+
+<section>
+  <div class="image band2 bg-light" style="background-image:url({{asset('imagen/oxas/curva_negra.svg')}})"></div>
+</section>
+
+<style>
+  .band2{
+    background-position-y: bottom;
+    bottom: -10px;
+  }
+
+</style>
 
 <div class="component-example bg-dark text-white">
   <div class="container">
