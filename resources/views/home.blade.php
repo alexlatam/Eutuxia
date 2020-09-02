@@ -153,4 +153,36 @@
   </div>
 </section>
 
+
+
+<div class="component-example bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col p-5">
+        <h1>Pasos para <b class="text-primary">COMENZAR ...</b></h1>
+      </div>
+      <div class="col">
+        <div class="owl-carousel visible owl-loaded owl-drag" data-items="[3,2]" data-margin="20">
+          
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1934px;"><div class="owl-item active" style="width: 366.667px; margin-right: 20px;"><div class="step">
+            <h4 class="step-title">Primer Paso</h4>
+            <p>Escribenos por nuestros medios de <a href="/contactanos"><b class="text-primary">CONTACTO.</b></a></p>
+          </div></div><div class="owl-item active" style="width: 366.667px; margin-right: 20px;"><div class="step">
+            <h4 class="step-title">Segundo Paso</h4>
+            <p>Coordinamos una reunión presencial o videollamada.</p>
+          </div></div><div class="owl-item active" style="width: 366.667px; margin-right: 20px;"><div class="step">
+            <h4 class="step-title">Tercer Paso</h4>
+            <p>Escucharemos con atención tus necesidades y requerimientos.</p>
+          </div></div><div class="owl-item" style="width: 366.667px; margin-right: 20px;"><div class="step">
+            <h4 class="step-title">Cuarto Paso</h4>
+            <p>Te enviamos una propuesta junto con la cotización del proyecto.</p>
+          </div></div><div class="owl-item" style="width: 366.667px; margin-right: 20px;"><div class="step">
+            <h4 class="step-title">Quinto Paso</h4>
+            <p>Preparate porque empieza la <a href="/contactanos"><b class="text-primary">AVENTURA</b></a></p>
+          </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection

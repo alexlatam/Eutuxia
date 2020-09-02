@@ -1,3 +1,15 @@
+
+<style>
+  .band2{
+    background-image:url('{{asset('imagen/oxas/curva_negra.svg')}}');
+    background-position-y: bottom;
+    bottom: -3px;
+  }
+  
+  </style>
+<section>
+  <div class="image band2"></div>
+</section>
 <footer class="tab-content" id="component-4">
   <div class="tab-pane show active" id="component-4-2" role="tabpanel" aria-labelledby="component-4-2">
     <div class="component-example component-example-fit">
@@ -14,9 +26,6 @@
                 </p>
               </div>
               <div class="col-md-6 text-md-right">
-                <div class="row">
-                  col
-                </div>
                 <a href="" class="btn btn-with-ico btn-primary">Ver Proyectos<i class="icon-arrow-right2 fs-20"></i></a>
                 <a href="" class="btn btn-secondary">Contactanos</a>
               </div>
@@ -70,13 +79,7 @@
               <a href="tel:58-414-344-62-25" class="phone bordered">+584143446225</a>
             </div>
           </div>
-        </div>
-      </footer>
-      <footer class="bg-dark text-white">
-        <div class="container">
-          <div class="row">
-            <span class="copyright-text">&copy; <b> Eutuxia Group, C.A. J-50017524-8</b>  -  Todos los derechos reservados 2020.</span>
-          </div>
+          <span class="copyright-text">&copy; <b> Eutuxia Group, C.A. J-50017524-8</b>  -  Todos los derechos reservados 2020.</span>
         </div>
       </footer>
     </div>
