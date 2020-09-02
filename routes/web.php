@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Cms\Product;
 use App\Cms\Service;
+use App\Cms\Project;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -114,7 +115,11 @@ Route::prefix('cms')->group(function () {
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
 
+Route::get('/blog', 'HomeController@blog')->name('blog');
+
+Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
 
 Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
 
@@ -125,11 +130,7 @@ Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option'
 Route::get('/nosotros', function () {
 	$productos = Product::all();
 	$servicios = Service::all();
-    return view('nosotros.index')->with(compact('productos', 'servicios'));
+	$proyectos = Project::all();
+    return view('nosotros.index')->with(compact('productos', 'servicios', 'proyectos'));
 });
 
-Route::get('/contactanos', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-    return view('contactanos.index')->with(compact('productos', 'servicios'));
-});

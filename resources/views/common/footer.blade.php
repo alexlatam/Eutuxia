@@ -51,7 +51,7 @@
           <div class="row">
             <h6 class="title_footer">Productos</h6>
           </div>
-          @foreach($productos as $producto)
+          @foreach($productos->take(4) as $producto)
           <div class="row" style="margin-bottom: 10px;">
             <a class="enlace_footer" href="{{route('product.option', $producto->id)}}">{{$producto->product}}</a>
           </div>
@@ -90,7 +90,7 @@
         background: linear-gradient(90deg, rgba(23,19,71,1) 10%, rgba(255,255,255,0.2) 50%, rgba(23,19,71,1) 90%);">
       </div>
       <div class="row">
-        <small class="text_footer" style="font-size:14px;">&copy; 2020 <span class="white-text">Eutuxia Group, C.A. J-</span> Todos los derechos reservados.</small>
+        <small class="text_footer" style="font-size:14px;">&copy; 2020 <span class="white-text">Eutuxia Group, C.A. J-50017524-8</span> Todos los derechos reservados.</small>
         <span class="language_footer right">
           <img class="dropdown-item-icon" src="imagen/us.svg" alt="">
           <a>Inglés</a>
