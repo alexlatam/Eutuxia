@@ -561,23 +561,9 @@
   </div>
     <!-- Section Image PC Dinamic -->
     <div class="container content_section">
-      <br><br><br>
+      <br>
     </div>
-    <!-- Section Paper Dinamic2 -->
-    <div class="row center-align" id="papers2" style="background-color:#444;">
-      <div class="col s12">
-        <input type="hidden" id="input_pappers2" v-model="inputValue2">
-        <button hidden type="hidden" id="buttonPappers2" v-on:click="expandPapper2"></button>
-      </div>
-      <div class="row">
-          <div class="col s1" v-for="papper of pappers" style="padding:0px;width:50px;height:50px;">
-            <div class="contenedor_card">
-              <div :class="papper.class" style="width:50%;margin:0px;">
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+    
     <script>
       var input2=document.getElementById('input_pappers2');
       //Cada 5s cambio el valor del input
@@ -683,7 +669,7 @@
         })
     </script>
    
-    <div class="container" style="margin-top:7rem;">
+   <div class="container" style="margin-top:7rem;">
     <div class="row center-align">
       <h3 class="center-align" style="margin-bottom:6rem;">Algunas de las tecnologias que usamos</h3>
       <div class="col s3" style="margin-bottom:4rem;">
@@ -712,6 +698,13 @@
       </div>
     </div>
     </div>
+    {{-- trabajemos juntos --}}
+    <section class="servicio_juntos">
+      <div class="servicio_juntos_body" >
+        <h2>Trabajemos juntos</h2>
+       <a class="waves-effect waves-light indigo darken-4 btn" style="padding: 0 3rem; color:white">Empezar con nosotros</a>
+      </div>
+    </section>
   <!-- footer -->
   <section style="background-color: #171347">
     <div class="fotter_container">
@@ -767,16 +760,16 @@
             <h6 class="title_footer">Productos</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Página Web Empresarial</a>
+            <a class="enlace_footer" href="/productos">Página Web Empresarial</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Aplicación Web</a>
+            <a class="enlace_footer" href="/producto">Aplicación Web</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Blog</a>
+            <a class="enlace_footer" href=/producto"">Blog</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Tienda Virtual</a>
+            <a class="enlace_footer" href="/producto">Tienda Virtual</a>
           </div>
         </div>
         <div class="col s2">
@@ -784,19 +777,19 @@
             <h6 class="title_footer">Servicios</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Marketing</a>
+            <a class="enlace_footer" href="/servicios">Marketing</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">SEO</a>
+            <a class="enlace_footer" href="/servicios">SEO</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Branding</a>
+            <a class="enlace_footer" href="/servicios">Branding</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Desarrollo</a>
+            <a class="enlace_footer" href="/servicios">Desarrollo</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Diseño Digital</a>
+            <a class="enlace_footer" href="/servicios">Diseño Digital</a>
           </div>
         </div>
         <div class="col s2">
@@ -804,16 +797,16 @@
             <h6 class="title_footer">Mapa del sitio</h6>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Inicio</a>
+            <a class="enlace_footer" href="/nosotros">Inicio</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Proyecto</a>
+            <a class="enlace_footer" href="/nosotros">Proyecto</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Premios</a>
+            <a class="enlace_footer" href="/nosotros">Premios</a>
           </div>
           <div class="row" style="margin-bottom: 10px;">
-            <a class="enlace_footer" href="">Contacto</a>
+            <a class="enlace_footer" href="/nosotros">Contacto</a>
           </div>
         </div>
       </div>
@@ -831,16 +824,7 @@
     </div>
   </section>
   <!-- Float Bottom -->
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large blue accent-4">
-      <i class="large material-icons">add</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating black"><i class="material-icons">brightness_3</i></a></li>
-      <li><a class="btn-floating deep-orange"><i class="material-icons">chat</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">language</i></a></li>
-    </ul>
-  </div>
+  @include('home.float_button')
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
