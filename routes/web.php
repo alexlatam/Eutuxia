@@ -123,14 +123,29 @@ Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
 
 Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
 
-Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option');
+
+
+Route::get('/servicios', function () {
+	$productos = Product::all();
+	$servicios = Service::all();
+	$proyectos = Project::all();
+    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
+});
+
+Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/nosotros', function () {
 	$productos = Product::all();
 	$servicios = Service::all();
 	$proyectos = Project::all();
-    return view('nosotros.index')->with(compact('productos', 'servicios', 'proyectos'));
+    return view('nosotros')->with(compact('productos', 'servicios', 'proyectos'));
 });
 
+Route::get('/servicios', function () {
+	$productos = Product::all();
+	$servicios = Service::all();
+	$proyectos = Project::all();
+    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
+});

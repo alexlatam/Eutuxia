@@ -1,4 +1,4 @@
-@extends('home.main_plantilla')
+@extends('common.main_plantilla')
 
 @section('title')
 <title>Blog</title>

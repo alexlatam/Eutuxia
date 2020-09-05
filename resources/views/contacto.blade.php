@@ -2,6 +2,10 @@
 
 @section('title')
 <title>Contactanos</title>
+@php
+// importante para el color de las letras del header dark o light
+    $color_header='dark';
+@endphp
 @endsection
 
 @section('content')

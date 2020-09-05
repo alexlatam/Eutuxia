@@ -1,12 +1,12 @@
 @extends('common.main_plantilla')
 @section('title')
-	<title>Servicios</title>
+<title>Servicios</title>
+@php
+      $color_header='dark';
+      @endphp
 @endsection
 
-
 @section('content')
-
-
 <div class="swiper-container swiper-container-carousel">
   <div class="swiper-wrapper">
     <div class="swiper-slide bg-dark">
@@ -24,7 +24,6 @@
                   <p>Programadores</p>
                   <p>Tus aliados</p>
                   <p>todo lo que necesitas ...</p>
-                  
               </div>
               <a href="" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
             </div>
