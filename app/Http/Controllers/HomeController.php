@@ -8,6 +8,9 @@ use App\Cms\Service;
 use App\Cms\Project;
 
 
+use App\Blog\BlogArticle;
+use App\Blog\BlogCategory;
+
 class HomeController extends Controller
 {
     public function home()
@@ -32,7 +35,10 @@ class HomeController extends Controller
         $servicios = Service::all();
         $proyectos = Project::all();
         $productos = Product::all();
-        return view('blog.index')->with(compact('productos', 'servicios', 'proyectos'));
+
+        $categorias = BlogCategory::all();
+        $articulos = BlogArticle::all();
+        return view('blog.index')->with(compact('productos', 'servicios', 'proyectos', 'categorias', 'articulos'));
     }
 
     public function blogDetail($id)

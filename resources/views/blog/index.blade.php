@@ -31,68 +31,31 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="masonry row gutter-2">
+          @foreach($articulos as $article)
           <li class="col-md-6">
             <article class="tile">
-              <div class="tile-image" style="background-image: url({{asset('imagen/image-1.jpg')}})"></div>
+              <div class="tile-image" style="background-image: url({{asset('storage/'.$article->image)}})"></div>
               <a href="" class="tile-content">
                 <div class="tile-footer">
-                  <span class="eyebrow mb-1">Design</span>
-                  <h3>Quick guide on traveling with friends.</h3>
+                  <span class="eyebrow mb-1">{{$article->title}}}</span>
+                  <h3>{{$article->description}}</h3>
                 </div>
               </a>
             </article>
           </li>
-          <li class="col-md-6">
-            <article class="tile tile-long">
-              <div class="tile-image" style="background-image: url({{asset('imagen/image-2.jpg')}})"></div>
-              <a href="" class="tile-content">
-                <div class="tile-footer">
-                  <span class="eyebrow mb-1">Design</span>
-                  <h3>Quick guide on traveling with friends.</h3>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li class="col-md-6">
-            <article class="tile tile-long">
-              <div class="tile-image" style="background-image: url({{asset('imagen/image-3.jpg')}})"></div>
-              <a href="" class="tile-content">
-                <div class="tile-footer">
-                  <span class="eyebrow mb-1">Design</span>
-                  <h3>Quick guide on traveling with friends.</h3>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li class="col-md-6">
-            <article class="tile">
-              <div class="tile-image" style="background-image: url({{asset('imagen/image-4.jpg')}})"></div>
-              <a href="" class="tile-content">
-                <div class="tile-footer">
-                  <span class="eyebrow mb-1">Design</span>
-                  <h3>Quick guide on traveling with friends.</h3>
-                </div>
-              </a>
-            </article>
-          </li>
+          @endforeach
         </ul>
       </div> 
       <aside class="col-md-4 pl-md-4">
         <div class="widget">
-          <span class="widget-title">Categories</span>
+          <span class="widget-title">Categorias</span>
           <div class="list-group list-group-categories">
+            @foreach($categorias as $category)
             <a href="" class="list-group-item d-flex justify-content-between align-items-center">
-              Cras justo odio
-              <span class="badge">14</span>
+              {{$category->title}}
+              <span class="badge">{{$category->articles->count()}}</span>
             </a>
-            <a href="" class="list-group-item d-flex justify-content-between align-items-center">
-              Dapibus ac facilisis in
-              <span class="badge">2</span>
-            </a>
-            <a href="" class="list-group-item d-flex justify-content-between align-items-center">
-              Morbi leo risus
-              <span class="badge">1</span>
-            </a>
+            @endforeach
           </div>
         </div>
         <div class="widget">

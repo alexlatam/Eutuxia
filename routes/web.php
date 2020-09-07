@@ -109,6 +109,37 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banners/project/update/{id}', 'Cms\ProjectBannerController@actualizarBannerProyecto')->name('banner.project.update');
 	Route::post('/banners/project/delete/{id}', 'Cms\ProjectBannerController@eliminarBannersProject')->name('banner.project.destroy');
 
+
+	//-------------- BLOG ----------------
+
+			//------ CATEGORIAS ----------
+
+	Route::get('/blog/categorias', 'Cms\blog\CategoryController@index')->name('blog.category');
+	Route::get('/blog/crear/categoria', 'Cms\blog\CategoryController@crearCategoria')->name('blog.category.create');
+	Route::get('/blog/editar/categoria/{id}', 'Cms\blog\CategoryController@editarCategoria')->name('blog.category.edit');
+
+		//metodo post
+	Route::post('/blog/guardar/categoria', 'Cms\blog\CategoryController@guardarCategoria')->name('blog.category.store');
+
+	Route::post('/blog/actualizar/categoria/{id}', 'Cms\blog\CategoryController@actualizarCategoria')->name('blog.category.update');
+
+	Route::post('/blog/eliminar/categoria/{id}', 'Cms\blog\CategoryController@eliminarCategoria')->name('blog.category.destroy');
+
+			//------ ARTICULOS ----------
+
+	Route::get('/blog/articulos', 'Cms\blog\ArticleController@index')->name('blog.article');
+	Route::get('/blog/crear/articulo', 'Cms\blog\ArticleController@crearArticulo')->name('blog.article.create');
+	Route::get('/blog/editar/articulo/{id}', 'Cms\blog\ArticleController@editarArticulo')->name('blog.article.show');
+
+		//metodo post
+
+	Route::post('/blog/guardar/articulo', 'Cms\blog\ArticleController@guardarArticulo')->name('blog.article.store');
+
+	Route::post('/blog/actualizar/articulo/{id}', 'Cms\blog\ArticleController@actualizarArticulo')->name('blog.article.update');
+
+	Route::post('/blog/eliminar/articulo/{id}', 'Cms\blog\ArticleController@eliminarArticulo')->name('blog.article.destroy');
+
+
 });
 
 
