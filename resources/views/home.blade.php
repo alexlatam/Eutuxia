@@ -165,31 +165,31 @@ $color_header='dark';
     <div class="row gutter-1 gutter-md-3 demo-preview">
       <div class="col-6 col-lg-4">
         <article class="card card-minimal">
-          <a href="html/app/portal.html"  class="card-img-container">
-            <img class="card-img" src="{{asset('demos/oxas.png')}}" alt="Portal">
+          <a href="https://servielectra.com.ve/" target="_black" class="card-img-container">
+            <img class="card-img" src="{{asset('imagen/oxas/servielectra.png')}}" alt="Profile">
           </a>
           <div class="card-body">
-            <h5 class="card-title text-center"><a href="#">Portal</a></h5>
+            <h5 class="card-title text-center"><a href="https://servielectra.com.ve/">Servielectra</a></h5>
           </div>
         </article>
       </div>
       <div class="col-6 col-lg-4">
         <article class="card card-minimal">
-          <a href="html/app/profile.html"  class="card-img-container">
-            <img class="card-img" src="{{asset('demos/profile.jpg')}}" alt="Profile">
+          <a href="https://ecofoodsservices.com/"  class="card-img-container">
+            <img class="card-img" src="{{asset('imagen/oxas/ecofood.png')}}" alt="Portal">
           </a>
           <div class="card-body">
-            <h5 class="card-title text-center"><a href="#">Profile</a></h5>
+            <h5 class="card-title text-center"><a href="https://ecofoodsservices.com/">Ecofood Services</a></h5>
           </div>
         </article>
       </div>
       <div class="col-6 col-lg-4">
         <article class="card card-minimal">
-          <a href="html/app/connections.html"  class="card-img-container">
-            <img class="card-img" src="{{asset('demos/connections.jpg')}}" alt="Connections">
+          <a href="http://eurochemus.com/"  class="card-img-container">
+            <img class="card-img" src="{{asset('imagen/oxas/eurochem.png')}}" alt="Connections">
           </a>
           <div class="card-body">
-            <h5 class="card-title text-center"><a href="#" >Connections</a></h5>
+            <h5 class="card-title text-center"><a href="http://eurochemus.com/" >Eurochem Us</a></h5>
           </div>
         </article>
       </div>
