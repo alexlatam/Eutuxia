@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}">
+<link href="{{asset('vendor/aos/aos.css')}}" type="text/css" rel="stylesheet"/>
 <!--Floating WhatsApp css-->
 <link rel="stylesheet" href="{{asset('css/floating-wpp.css')}}" />
 
