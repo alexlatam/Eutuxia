@@ -38,7 +38,8 @@ class HomeController extends Controller
 
         $categorias = BlogCategory::all();
         $articulos = BlogArticle::all();
-        return view('blog.index')->with(compact('productos', 'servicios', 'proyectos', 'categorias', 'articulos'));
+        $recientes = BlogArticle::orderBy('id', 'DESC')->take(4)->get();
+        return view('blog.index')->with(compact('productos', 'servicios', 'proyectos', 'categorias', 'articulos', 'recientes'));
     }
 
     public function blogDetail($id)
@@ -46,7 +47,9 @@ class HomeController extends Controller
         $servicios = Service::all();
         $proyectos = Project::all();
         $productos = Product::all();
-        return view('blog.blog_detail')->with(compact('productos', 'servicios', 'proyectos'));
+        $articulo = BlogArticle::find($id);
+        $recientes = BlogArticle::orderBy('id', 'DESC')->take(3)->get();
+        return view('blog.blog_detail')->with(compact('productos', 'servicios', 'proyectos', 'articulo', 'recientes'));
     }
 
     public function productos($id){
@@ -56,7 +59,7 @@ class HomeController extends Controller
     	$proyectos = Project::all();
     	$producto = Product::find($id);
     	$banners = $producto->banners;
-
+        $articulo = BlogArticle::find($id);
     	return view('productos.index')->with(compact('productos', 'producto', 'banners', 'servicios', 'proyectos'));
     }
 

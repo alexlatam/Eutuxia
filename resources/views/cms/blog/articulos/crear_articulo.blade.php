@@ -38,7 +38,7 @@
         </div>
         <div class="col-12 mb-4">
           <h5>Contenido</h5>
-          <textarea class="form-control" id="content" name="content" placeholder="Contenido"></textarea>
+          <textarea class="ckeditor" id="content" name="content" placeholder="Contenido"></textarea>
         </div>
         <div class="col-12 mb-4">
           <h5>Categorias</h5>
@@ -62,7 +62,7 @@
   </div>
 </section>
 
-
+<script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 <script type="text/javascript">
   let inputTitle = document.getElementById('input_title'),
       inputFile = document.getElementById('input_file'),
@@ -98,7 +98,7 @@
         }if(description.value == '')
         {
           arrayValidate.push('Debe agregar una descripción')
-        }if(contenido.value == '')
+        }if(CKEDITOR.instances.content.getData() == '')
         {
           arrayValidate.push('Debe agregar un contenido')
         }if(categoria.selectedIndex == 0)

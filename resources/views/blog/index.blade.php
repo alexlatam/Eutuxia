@@ -35,7 +35,7 @@
           <li class="col-md-6">
             <article class="tile">
               <div class="tile-image" style="background-image: url({{asset('storage/'.$article->image)}})"></div>
-              <a href="" class="tile-content">
+              <a href="{{route('blog.show', $article->id)}}" class="tile-content">
                 <div class="tile-footer">
                   <span class="eyebrow mb-1">{{$article->title}}}</span>
                   <h3>{{$article->description}}</h3>
@@ -61,38 +61,16 @@
         <div class="widget">
           <span class="widget-title">Latest News</span>
           <ul class="feed">
+            @foreach($recientes as $reciente)
             <li>
-              <a href="" class="feed-item">
-                <img src="{{asset('imagen/image-1.jpg')}}" alt="Image">
+              <a href="{{route('blog.show', $reciente->id)}}" class="feed-item">
+                <img src="{{asset('storage/'.$reciente->image)}}" alt="Image">
                 <div class="feed-item-content">
-                  <h3>Top 10 most beautifull beaches of mediteranian sea</h3>
+                  <h3>{{$reciente->title}}</h3>
                 </div>
               </a>
             </li>
-            <li>
-              <a href="" class="feed-item">
-                <img src="{{asset('imagen/image-2.jpg')}}" alt="Image">
-                <div class="feed-item-content">
-                  <h3>Amazing views of Paradise Bay</h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="feed-item">
-                <img src="{{asset('imagen/image-3.jpg')}}" alt="Image">
-                <div class="feed-item-content">
-                  <h3>Amazing views of Paradise Bay</h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="feed-item">
-                <img src="{{asset('imagen/image-4.jpg')}}" alt="Image">
-                <div class="feed-item-content">
-                  <h3>Amazing views of Paradise Bay</h3>
-                </div>
-              </a>
-            </li>
+            @endforeach
           </ul>
         </div>
         <div class="widget">
