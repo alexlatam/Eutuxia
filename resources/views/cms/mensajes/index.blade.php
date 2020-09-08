@@ -28,7 +28,7 @@
       </thead>
       <tbody>
         @foreach($messages as $message)
-          <?php $mensaje = substr($message->message, 0, 50); ?>
+
           <tr>
             <td>{{$message->id}}</td>
             <td>
@@ -36,7 +36,7 @@
             </td>
             <td>{{$message->email}}</td>
             <td>{{$message->phone}}</td>
-            <td>{{$mensaje}} ...</td>
+            <td>{{substr($message->message, 0, 50)}} ...</td>
             <td class="d-flex ">
               <button class="btn btn-outline-success mensaje" id="{{$message->id}}" data-toggle="modal" data-target="#modalMensaje">Ver más</button>
             </td>
