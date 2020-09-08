@@ -10,14 +10,7 @@
   <div class="container">
     <div class="row justify-content-center">
     <div class="col text-center">
-        <h1>Latest Blog Posts</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb-custom">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/inner-pages.html">Inner Pages</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Blog Tiles</li>
-          </ol>
-        </nav>
+        <h1>Ultimas Noticias y Articulos</h1>
       </div>
     </div>
   </div>    
@@ -59,7 +52,7 @@
           </div>
         </div>
         <div class="widget">
-          <span class="widget-title">Latest News</span>
+          <span class="widget-title">Ultimos articulos</span>
           <ul class="feed">
             @foreach($recientes as $reciente)
             <li>
@@ -72,18 +65,6 @@
             </li>
             @endforeach
           </ul>
-        </div>
-        <div class="widget">
-          <span class="widget-title">Tags</span>
-          <div class="tag-cloud">
-            <a href="">Design</a>
-            <a href="">Development</a>
-            <a href="">Travel</a>
-            <a href="">Web Design</a>
-            <a href="">Marketing</a>
-            <a href="">Research</a>
-            <a href="">Managment</a>
-          </div>
         </div>
       </aside>
     </div>

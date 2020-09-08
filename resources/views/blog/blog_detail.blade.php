@@ -19,7 +19,7 @@
             <div class="row align-items-center vh-100">
               <div class="col-md-8" data-swiper-parallax-y="-250%">
                 <span class="eyebrow mb-2">{{$articulo->category->title}}</span>
-                <h1 class="display-2">The best places for coffee in Stockholm</h1>
+                <h1 class="display-2">{{$articulo->title}}</h1>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
         {!! $articulo->content !!}
       </div>
     </div>
-    <div class="row justify-content-center">
+    <!-- <div class="row justify-content-center">
       <div class="col-md-12 col-lg-10">
         <div class="owl-carousel owl-carousel-single" data-dots="true" data-nav="true" data-autoplay="true">
           <figure class="photo">
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 
@@ -88,7 +88,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2>Latest News</h2>
+        <h2>Ultimos articulos</h2>
       </div>
     </div>
     <div class="row gutter-2">
@@ -96,7 +96,7 @@
       <div class="col-md-6 col-lg-4">
         <article class="tile">
           <div class="tile-image" style="background-image: url({{asset('storage/'.$reciente->image)}})"></div>
-          <a href="" class="tile-content">
+          <a href="{{route('blog.show', $reciente->id)}}" class="tile-content">
             <div class="tile-header">
               <span class="eyebrow mb-1">{{$reciente->title}}</span>
               <h3>{{$reciente->description}}</h3>
