@@ -139,7 +139,10 @@ Route::prefix('cms')->group(function () {
 
 	Route::post('/blog/eliminar/articulo/{id}', 'Cms\blog\ArticleController@eliminarArticulo')->name('blog.article.destroy');
 
+	//-------------- MENSAJES DE CONTACTO ----------------
 
+	Route::get('/mensajes', 'Cms\MessageController@index')->name('message.home');
+	Route::get('/message/get/{id}', 'Cms\MessageController@getMessage');
 });
 
 
@@ -147,6 +150,8 @@ Route::prefix('cms')->group(function () {
 Route::get('/', 'HomeController@home');
 
 Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
+
+Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
 
 Route::get('/blog', 'HomeController@blog')->name('blog');
 

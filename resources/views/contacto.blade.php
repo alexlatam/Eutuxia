@@ -110,7 +110,13 @@
     </div>
     <div class="row">
       <div class="col">
-        <form>
+        @if(session('message'))
+        <div class="alert alert-success" role="alert">
+          {{session('message')}}
+        </div>
+        @endif
+        <form action="{{route('contacto.send')}}" method="POST">
+          @csrf
           <div class="form-row mb-1">
             <div class="col">
               <input type="text" class="form-control form-control-minimal" name="name"  placeholder="Nombre">
