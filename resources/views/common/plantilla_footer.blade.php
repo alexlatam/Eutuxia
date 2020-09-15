@@ -77,3 +77,4 @@
 
 <script src="{{asset('js/plantilla_js/vendor.js')}}"></script>
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
+<script src="{{asset('vendor/aos/aos.js')}}"></script>

@@ -16,7 +16,8 @@
 <!--Jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 {{-- <script src="{{asset('js/floating-wpp.js')}}"></script> --}}
-
+<!--AOS-->
+<script src="{{asset('vendor/aos/aos.css')}}"></script>
 <!-- metas -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

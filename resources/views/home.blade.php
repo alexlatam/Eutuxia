@@ -12,7 +12,7 @@ $color_header='dark';
 
 @section('content')
 
-<div class="swiper-container swiper-container-carousel">
+<div class="swiper-container"> <!-- Para activar carousel agregar clase 'swiper-container-carousel'  -->
   <div class="swiper-wrapper">
     <div class="swiper-slide bg-dark">
       <div class="image" style=" background-image:url('{{asset('imagen/oxas/fondo2.jpg')}}');" ></div>
@@ -29,7 +29,6 @@ $color_header='dark';
                   <p>Programadores</p>
                   <p>Tus aliados</p>
                   <p>todo lo que necesitas ...</p>
-                  
               </div>
               <a href="" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
             </div>
@@ -46,7 +45,6 @@ $color_header='dark';
     background-position-y: bottom;
     bottom: -3px;
   }
-
 </style>
 
 <div class="container">
@@ -54,7 +52,7 @@ $color_header='dark';
 	  <div class="col-sm-6">
 	    <h3 style="margin-bottom:2rem;">Landing page</h3>
 	    <p class="text_page ">
-        Una página única de tu sitio web que busca 
+        Un <strong>Landing page</strong> es una página única de tu sitio web que busca 
         convertir a un visitante en un lead, esto es, en un usuario que ha 
         facilitado sus datos a una empresa y que por tanto se convierte en un 
         registro de su base de datos, haciendo posible que la empresa siga 
@@ -68,7 +66,6 @@ $color_header='dark';
 	    </div>	
 	  </div>
 	</div>
-
 
 	<div class="row mt-4">
 	  <div class="col-6 d-none d-sm-block" style="text-align:left;">
@@ -87,7 +84,6 @@ $color_header='dark';
 	  </div>
 	</div>
 
-
 	<div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
 	  <div class="col-sm-6">
 	    <h3 style="margin-bottom:2rem;">Tiendas Virtuales</h3>
@@ -104,7 +100,6 @@ $color_header='dark';
 	    </div>	
 	  </div>
 	</div>
-
 
 	<div class="row mb-5">
 	    <div class="col-6 d-none d-sm-block" style="text-align:left;">
