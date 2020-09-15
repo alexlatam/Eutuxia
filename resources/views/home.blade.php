@@ -163,7 +163,7 @@ $color_header='dark';
   </div>
   <div class="container ">
     <div class="row gutter-1 gutter-md-3 demo-preview">
-      <div class="col-6 col-lg-4">
+      <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="https://servielectra.com.ve/" target="_black" class="card-img-container">
             <img class="card-img" src="{{asset('imagen/oxas/servielectra.png')}}" alt="Profile">
@@ -173,7 +173,7 @@ $color_header='dark';
           </div>
         </article>
       </div>
-      <div class="col-6 col-lg-4">
+      <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="https://ecofoodsservices.com/"  class="card-img-container" target="_blank">
             <img  class="card-img" src="{{asset('imagen/oxas/ecofood.png')}}" alt="Portal">
@@ -183,7 +183,7 @@ $color_header='dark';
           </div>
         </article>
       </div>
-      <div class="col-6 col-lg-4">
+      <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="http://eurochemus.com/"  class="card-img-container" target="_blank">
             <img class="card-img" src="{{asset('imagen/oxas/eurochem.png')}}" alt="Connections">
