@@ -60,18 +60,32 @@ $color_header='dark';
 	    </p>
 	    <button type="button" class="btn btn-primary btn-rounded">Mas Información</button>
 	  </div>
-	  <div class="col-6 d-none d-sm-block" style="text-align:left;">
-	    <div class="">
+    <div class="col-6 d-none d-sm-block" style="text-align:left;">
+	    <!--div-- class="">
 	      <img src="imagen/tablet_page.png" alt="" width="100%">
-	    </div>	
+      </!--div-->
+      <div class="cont_image">
+        <img src="imagen/tablet_page.png" alt="" width="100%">
+        <img class="picture_float8" src="imagen/cart.png" alt="" width="45%" data-aos="fade-up" data-aos-duration="1500">
+        <img class="picture_float7" src="imagen/comentarios2.jpg" alt="" width="35%" data-aos="fade-up" data-aos-duration="1500">
+      </div>
 	  </div>
-	</div>
+  </div>
 
 	<div class="row mt-4">
 	  <div class="col-6 d-none d-sm-block" style="text-align:left;">
-	    <div class="cont_image">
+	    <!--div-- class="cont_image">
 	      <img src="imagen/fondo.png" alt="" width="100%">
-	    </div>
+      </!--div-->
+      <div class="cont_image">
+        <img src="imagen/fondo.png" alt="" width="100%">
+        <img class="picture_float1" src="imagen/buttons.png" alt="" width="30%" id="picture_float1">
+        <img class="picture_float2" src="imagen/card.png" alt="" width="30%" id="picture_float2">
+        <img class="picture_float3" src="imagen/lista.png" alt="" width="15%" id="picture_float3">
+        <img class="picture_float4" src="imagen/redes.png" alt="" width="20%" id="picture_float4">
+        <img class="picture_float5" src="imagen/texto.png" alt="" width="25%" id="picture_float5">
+        <img class="picture_float6" src="imagen/section_footer.png" alt="" width="30%" id="picture_float6">
+      </div>
 	  </div>
 	  <div class="col-sm-6">
 	    <h3 style="margin-bottom:2rem;">Páginas Dinámicas</h3>
@@ -82,7 +96,59 @@ $color_header='dark';
 	    </p>
 	    <button type="button" class="btn btn-primary btn-rounded" >¡Quiero mi página!</button>
 	  </div>
-	</div>
+  </div>
+  
+  <script>
+    anime({
+      targets: '#picture_float1',
+      translateX: 18,
+      duration: 2500,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+    anime({
+      targets: '#picture_float2',
+      translateY: 35,
+      duration: 4000,
+      direction: 'alternate',
+       delay: 1000,
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+    anime({
+      targets: '#picture_float3',
+      translateY: 18,
+      duration: 10000,
+      direction: 'alternate',
+      loop: true,
+      easing: 'linear'
+    });
+    anime({
+      targets: '#picture_float4',
+      translateX: 58,
+      duration: 6500,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+    anime({
+      targets: '#picture_float5',
+      translateY: 8,
+      duration: 3500,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+    anime({
+      targets: '#picture_float6',
+      translateX: 80,
+      duration: 20000,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+  </script>
 
 	<div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
 	  <div class="col-sm-6">
@@ -95,9 +161,11 @@ $color_header='dark';
 	    <button type="button" class="btn btn-primary btn-rounded">Crear mi tienda!</button>
 	  </div>
 	  <div class="col-6 d-none d-sm-block" style="text-align:left;">
-	    <div class="">
-	      <img src="imagen/tablet_page.png" alt="" width="100%">
-	    </div>	
+      <div class="cont_image">
+        <img src="imagen/tablet_page.png" alt="" width="100%">
+        <img class="picture_float8" src="imagen/cart.png" alt="" width="45%" data-aos="fade-up" data-aos-duration="1500">
+        <img class="picture_float7" src="imagen/comentarios2.jpg" alt="" width="35%" data-aos="fade-up" data-aos-duration="1500">
+      </div>
 	  </div>
 	</div>
 
