@@ -87,6 +87,24 @@
                 Proyectos
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('blog.category')}}">
+                <span data-feather="home"></span>
+                Blog Categorias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('blog.article')}}">
+                <span data-feather="home"></span>
+                Blog Articulos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('message.home')}}">
+                <span data-feather="home"></span>
+                Mensajes
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

@@ -1,15 +1,4 @@
 
-<style>
-  .band2{
-    background-image:url('{{asset('imagen/oxas/curva_negra.svg')}}');
-    background-position-y: bottom;
-    bottom: -3px;
-  }
-  
-  </style>
-<section>
-  <div class="image band2"></div>
-</section>
 <footer class="tab-content" id="component-4">
   <div class="tab-pane show active" id="component-4-2" role="tabpanel" aria-labelledby="component-4-2">
     <div class="component-example component-example-fit">
@@ -85,6 +74,9 @@
     </div>
   </div>
 </footer>
-
 <script src="{{asset('js/plantilla_js/vendor.js')}}"></script>
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
+<script src="{{asset('vendor/aos/aos.js')}}"></script>
+<script type="text/javascript">
+  AOS.init();
+</script>
