@@ -10,7 +10,7 @@
               <div class="col-md-6">
                 <h4 class="">Llevamos tu empresa al próximo nivel</h4>
                 <p class="text_footer" style="font-size:18px;">
-                  Somos una empresa enfocada en agilizar la digitalización de los procesos
+                  Nos enfocaen agilizar la digitalización de los procesos
                   de otras empresas.
                 </p>
               </div>
@@ -27,31 +27,32 @@
             <div class="col-lg-4">
               <div class="mb-1">
                 <p class="text_footer" style="font-size:18px;">
-                  Somos una empresa enfocada en agilizar la digitalizacion de los procesos
-                  de otras empresas.
+                  Somos una empresa B2B enfocada en agilizar la digitalización de las empresas.
                 </p>
                 <ul class="socials">
-                  <li><a href="" class="icon-facebook fs-20"></a></li>
-                  <li><a href="" class="icon-instagram fs-20"></a></li>
-                  <li><a href="" class="icon-twitter fs-20"></a></li>
-                  <li><a href="" class="icon-linkedin fs-20"></a></li>
+                  <li><a href="https://www.facebook.com/OXAS-TECH-108906604277879" class="icon-facebook fs-20"></a></li>
+                  <li><a href="https://www.instagram.com/oxas.tech/" class="icon-instagram fs-20"></a></li>
+                  <li><a href="https://www.linkedin.com/company/oxastech" class="icon-linkedin fs-20"></a></li>
+                  {{-- <li><a href="" class="icon-twitter fs-20"></a></li> --}}
                 </ul>
               </div>
             </div>
             <div class="col col-lg-2">
               <ul class="list-group list-group-minimal">
                 <h6 class="list-group-item">Productos</h6>
-                @foreach($productos->take(4) as $producto)
-                <li class="list-group-item"><a href="{{route('product.option', $producto->id)}}">{{$producto->product}}</a></li>
-                @endforeach
+                <li class="list-group-item"><span class="h6 text-muted">Landing Page</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Web Corporativas</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Tiendas Virtuales</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Aplicaciones web</span></li>
               </ul>
             </div>
             <div class="col col-lg-2">
               <ul class="list-group list-group-minimal">
                 <h6 class="list-group-item">Servicios</h6>
-                @foreach($servicios->take(4) as $servicio)
-                <li class="list-group-item"><a href="{{route('service.option', $servicio)}}">{{$servicio->service}}</a></li>
-                @endforeach
+                <li class="list-group-item"><span class="h6 text-muted">Redes Sociales</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Identidad Corporativa</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Diseño UX/IU</span></li>
+                <li class="list-group-item"><span class="h6 text-muted">Desarrollo Web</span></li>
               </ul>
             </div>
             {{-- <div class="col col-lg-2">
