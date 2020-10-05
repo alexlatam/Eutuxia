@@ -17,8 +17,10 @@ class HomeController extends Controller
     {	
     	$servicios = Service::all();
     	$proyectos = Project::all();
-    	$productos = Product::all();
-    	return view('home')->with(compact('productos', 'servicios', 'proyectos'));
+        $productos = Product::all();
+        
+        $articulos = BlogArticle::orderBy('id', 'DESC')->take(4)->get();
+    	return view('home')->with(compact('productos', 'servicios', 'proyectos', 'articulos' ));
     }
 
 
@@ -38,7 +40,7 @@ class HomeController extends Controller
 
         $categorias = BlogCategory::all();
         $articulos = BlogArticle::all();
-        $recientes = BlogArticle::orderBy('id', 'DESC')->take(4)->get();
+        $recientes = BlogArticle::orderBy('id', 'DESC')->take(3)->get();
         return view('blog.index')->with(compact('productos', 'servicios', 'proyectos', 'categorias', 'articulos', 'recientes'));
     }
 

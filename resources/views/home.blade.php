@@ -347,6 +347,7 @@ $color_header='dark';
               </svg>
             <h2 class="pt-2 m-0"><b>OXAS</b></h2>
             <span class="h5">Desarrollamos negocios digitales</span> 
+            <a class="btn btn-outline-white btn-rounded m-2 px-5"  href="/nosotros">Quienes somos</a>
           </div>
         </div>
       </div>
@@ -354,23 +355,8 @@ $color_header='dark';
     <!-- / features -->
 
     
-    <section  class="bg-white section-decorated-bottom">
-      <div class="decorated-bottom text-light">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40"  preserveAspectRatio="none">  
-          <path d="">
-            <animate 
-              attributeName="d" 
-              begin="0s" 
-              dur="5s"
-              repeatCount="indefinite"
-              values="
-              M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;
-              M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40 L1000,50 L0,50 L0,40 Z;
-              M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40 L1000,50 L0,50 L0,30 Z;
-              M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;"></animate>
-          </path>
-        </svg>
-      </div>
+    <section  >
+      
       <div class="container px-5">
         <div class="row justify-content-between align-items-center text-center text-md-left">
           <div class="col-md-2">
@@ -406,6 +392,47 @@ $color_header='dark';
     
     </section>
     
+    
+    <!-- news -->
+    <section id="news" class="bg-white section-decorated-bottom">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Ultimas Noticias</h2>
+          </div>
+        </div>
+        <div class="row gutter-2">
+
+          @foreach ($articulos as $articulo)
+          <div class="col-md-6 col-lg-4">
+            <article class="tile">
+              <div class="tile-image" style="background-image: url({{asset('storage/'.$articulo->image)}})"></div>
+              <div class="tile-content">
+                <div class="tile-header">
+                  <span class="eyebrow mb-1">{{$articulo->category->title}}</span>
+                  <h3>{{$articulo->title}}</h3>
+                </div>
+                <div class="tile-footer">
+                  <a class="btn btn-ico btn-outline-white btn-rounded"  href="{{route('blog.show', $articulo->id)}}" >
+                    <i class="icon-arrow-right2 fs-20"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          @endforeach
+
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="" class="btn btn-outline-primary btn-rounded px-5">View All</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / news -->
+
 
      <!-- about -->
      <section class="bg-light pb-0">
@@ -479,6 +506,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit volupta
       </div>
     </section>
     <!-- / about -->
+
+
+
 
 
 
