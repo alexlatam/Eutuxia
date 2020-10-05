@@ -394,7 +394,7 @@ $color_header='dark';
     
     
     <!-- news -->
-    <section id="news" class="bg-white section-decorated-bottom">
+    {{-- <section id="news" class="bg-white section-decorated-bottom">
       
       <div class="container">
         <div class="row">
@@ -430,7 +430,7 @@ $color_header='dark';
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
     <!-- / news -->
 
 

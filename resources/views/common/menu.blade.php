@@ -12,16 +12,16 @@
           <ul class="navbar-nav align-items-center mr-auto">
           </ul>
           <ul class="navbar-nav align-items-center mr-0">
-            {{-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="/" role="button">
                 Home
               </a>
-            </li> --}}
-            {{-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/nosotros" role="button">
                 Nosotros
               </a>
-            </li> --}}
+            </li>
 
             {{-- <li class="nav-item">
               <a class="nav-link" href="/servicios" role="button">
