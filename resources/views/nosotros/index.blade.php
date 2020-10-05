@@ -1,4 +1,5 @@
-@extends('home.main')
+@extends('common.main_plantilla')
+
 @section('title')
 	Nosotros
 @endsection

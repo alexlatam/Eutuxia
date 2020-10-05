@@ -109,6 +109,40 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banners/project/update/{id}', 'Cms\ProjectBannerController@actualizarBannerProyecto')->name('banner.project.update');
 	Route::post('/banners/project/delete/{id}', 'Cms\ProjectBannerController@eliminarBannersProject')->name('banner.project.destroy');
 
+
+	//-------------- BLOG ----------------
+
+			//------ CATEGORIAS ----------
+
+	Route::get('/blog/categorias', 'Cms\blog\CategoryController@index')->name('blog.category');
+	Route::get('/blog/crear/categoria', 'Cms\blog\CategoryController@crearCategoria')->name('blog.category.create');
+	Route::get('/blog/editar/categoria/{id}', 'Cms\blog\CategoryController@editarCategoria')->name('blog.category.edit');
+
+		//metodo post
+	Route::post('/blog/guardar/categoria', 'Cms\blog\CategoryController@guardarCategoria')->name('blog.category.store');
+
+	Route::post('/blog/actualizar/categoria/{id}', 'Cms\blog\CategoryController@actualizarCategoria')->name('blog.category.update');
+
+	Route::post('/blog/eliminar/categoria/{id}', 'Cms\blog\CategoryController@eliminarCategoria')->name('blog.category.destroy');
+
+			//------ ARTICULOS ----------
+
+	Route::get('/blog/articulos', 'Cms\blog\ArticleController@index')->name('blog.article');
+	Route::get('/blog/crear/articulo', 'Cms\blog\ArticleController@crearArticulo')->name('blog.article.create');
+	Route::get('/blog/editar/articulo/{id}', 'Cms\blog\ArticleController@editarArticulo')->name('blog.article.show');
+
+		//metodo post
+
+	Route::post('/blog/guardar/articulo', 'Cms\blog\ArticleController@guardarArticulo')->name('blog.article.store');
+
+	Route::post('/blog/actualizar/articulo/{id}', 'Cms\blog\ArticleController@actualizarArticulo')->name('blog.article.update');
+
+	Route::post('/blog/eliminar/articulo/{id}', 'Cms\blog\ArticleController@eliminarArticulo')->name('blog.article.destroy');
+
+	//-------------- MENSAJES DE CONTACTO ----------------
+
+	Route::get('/mensajes', 'Cms\MessageController@index')->name('message.home');
+	Route::get('/message/get/{id}', 'Cms\MessageController@getMessage');
 });
 
 
@@ -117,20 +151,37 @@ Route::get('/', 'HomeController@home');
 
 Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
 
+Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
+
 Route::get('/blog', 'HomeController@blog')->name('blog');
 
 Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
 
 Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
 
-Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option');
+
+
+Route::get('/servicios', function () {
+	$productos = Product::all();
+	$servicios = Service::all();
+	$proyectos = Project::all();
+    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
+});
+
+Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
 
 Route::get('/nosotros', function () {
 	$productos = Product::all();
 	$servicios = Service::all();
 	$proyectos = Project::all();
-    return view('nosotros.index')->with(compact('productos', 'servicios', 'proyectos'));
+    return view('nosotros')->with(compact('productos', 'servicios', 'proyectos'));
 });
 
+Route::get('/servicios', function () {
+	$productos = Product::all();
+	$servicios = Service::all();
+	$proyectos = Project::all();
+    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
+});
