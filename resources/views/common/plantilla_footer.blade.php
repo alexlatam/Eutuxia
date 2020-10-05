@@ -2,26 +2,8 @@
 <footer class="tab-content" id="component-4">
   <div class="tab-pane show active" id="component-4-2" role="tabpanel" aria-labelledby="component-4-2">
     <div class="component-example component-example-fit">
-      <footer class="bg-dark text-white">
+      <footer class="bg-dark text-white separator-top">
         
-        <div class="separator-bottom py-5">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-6">
-                <h4 class="">Llevamos tu empresa al próximo nivel</h4>
-                <p class="text_footer" style="font-size:18px;">
-                  Nos enfocaen agilizar la digitalización de los procesos
-                  de otras empresas.
-                </p>
-              </div>
-              <div class="col-md-6 text-md-right">
-                <a href="" class="btn btn-with-ico btn-primary">Ver Proyectos<i class="icon-arrow-right2 fs-20"></i></a>
-                <a href="" class="btn btn-secondary">Contactanos</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="container">
           <div class="row">
             <div class="col-lg-4">

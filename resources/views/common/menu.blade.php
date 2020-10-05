@@ -12,22 +12,22 @@
           <ul class="navbar-nav align-items-center mr-auto">
           </ul>
           <ul class="navbar-nav align-items-center mr-0">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="/" role="button">
                 Home
               </a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{-- <li class="nav-item">
               <a class="nav-link" href="/nosotros" role="button">
                 Nosotros
               </a>
-            </li>
+            </li> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="/servicios" role="button">
                 Servicios
               </a>
-            </li>
+            </li> --}}
 {{-- 
               <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,17 +70,17 @@
               @endforeach
               </div>
             </li> --}}
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
               <a class="nav-link" href="{{asset('contactanos')}}">
                 Contacto
               </a>
-            </li>
+            </li> --}}
 
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
               <a class="nav-link" href="{{asset('blog')}}">
                 Blog
               </a>
-            </li>
+            </li> --}}
 
           </ul>
         </div>
