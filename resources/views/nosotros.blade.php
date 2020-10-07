@@ -34,7 +34,7 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <h1 class="text-decorated">Nuestro equipo se hará cargo de tu <b>Crecimiento Digital</b></h1>
-              <p>Somos <b>OXAS</b> una <b>Agencia Digital</b> con un equipo de profesionales entusiasta de los  <mark style="background-color: #8ed825;" >Negocios</mark>, la <mark style="background-color: #8ed825;" >tecnología</mark>y el <mark style="background-color: #8ed825;" >marketing</mark>. Nos encargamos del Diseño y desarrollo de proyectos de Tecnologia para empresas, marcas y emprendimientos.  Ofrecemos un servicio de primera cuidando cada detalle, y logrando que el cliente viva una experiencia grata durante todos los procesos.  Somos creyentes de que con nuestras habilidades, conocimientos y productos podemos crear un mundo mejor.</p>
+              <p>Somos <b>OXAS</b> una <b>Agencia Digital</b> con un equipo de profesionales entusiasta de los  <mark style="background-color: #8ed825;" >Negocios</mark>, la <mark style="background-color: #8ed825;" >tecnología</mark>y el <mark style="background-color: #8ed825;" >marketing</mark>. Nos encargamos del diseño y desarrollo de proyectos de Tecnologia para empresas, marcas y emprendimientos.  Ofrecemos un servicio de primera cuidando cada detalle, y logrando que el cliente viva una experiencia grata durante todos los procesos.  Somos creyentes de que con nuestras habilidades, conocimientos y productos podemos crear un mundo mejor.</p>
             </div>
           </div>
 
