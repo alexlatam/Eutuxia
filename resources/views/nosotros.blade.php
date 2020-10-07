@@ -1,7 +1,24 @@
 @extends('common.main_plantilla')
 
 @section('title')
-<title>Nosotros</title>
+<!-- Primary Meta Tags -->
+<title>Nosotros - Agencia digital en LATAM </title>
+<meta name="title" content="Nosotros - Agencia digital en LATAM ">
+<meta name="description" content="La agencia digital OXAS que se hará cargo de tu crecimiento. Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oxas.tech/">
+<meta property="og:title" content="Nosotros - Agencia digital en LATAM ">
+<meta property="og:description" content="La agencia digital OXAS que se hará cargo de tu crecimiento. Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital.">
+<meta property="og:image" content="{{asset('imagen/oxas/team.jpg')}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://oxas.tech/">
+<meta property="twitter:title" content="Nosotros - Agencia digital en LATAM ">
+<meta property="twitter:description" content="La agencia digital OXAS que se hará cargo de tu crecimiento. Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital.">
+<meta property="twitter:image" content="{{asset('imagen/oxas/team.jpg')}}">
 @php
 // importante para el color de las letras del header dark o light
     $color_header='light';
@@ -17,7 +34,7 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <h1 class="text-decorated">Nuestro equipo se hará cargo de tu <b>Crecimiento Digital</b></h1>
-              <p>Somos Oxas, un equipo de profesionales entusiasta de los  <mark style="background-color: #8ed825;" >Negocios</mark>, la <mark style="background-color: #8ed825;" >tecnología</mark>, el <mark style="background-color: #8ed825;" >marketing</mark>, el mundo digital y sobre todo creyentes de que con nuestras habilidades, conocimientos y productos podemos crear un mundo mejor.</p>
+              <p>Somos <b>OXAS</b> una <b>Agencia Digital</b> con un equipo de profesionales entusiasta de los  <mark style="background-color: #8ed825;" >Negocios</mark>, la <mark style="background-color: #8ed825;" >tecnología</mark>y el <mark style="background-color: #8ed825;" >marketing</mark>. Nos encargamos del Diseño y desarrollo de proyectos de Tecnologia para empresas, marcas y emprendimientos.  Ofrecemos un servicio de primera cuidando cada detalle, y logrando que el cliente viva una experiencia grata durante todos los procesos.  Somos creyentes de que con nuestras habilidades, conocimientos y productos podemos crear un mundo mejor.</p>
             </div>
           </div>
 
