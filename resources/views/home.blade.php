@@ -1,9 +1,25 @@
 @extends('common.main_plantilla')
 
 @section('title')
-<title>
-    Oxas - Desarrollamos negocios digitales
-</title>
+<!-- Primary Meta Tags -->
+<title>Oxas - Desarrollamos negocios digitales</title>
+<meta name="title" content="Oxas - Desarrollamos negocios digitales">
+<meta name="description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oxas.tech/">
+<meta property="og:title" content="Oxas - Desarrollamos negocios digitales">
+<meta property="og:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+<meta property="og:image" content="{{asset('imagen/oxas/share.jpg')}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://oxas.tech/">
+<meta property="twitter:title" content="Oxas - Desarrollamos negocios digitales">
+<meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+<meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
+
 @php
 // importante para el color de las letras del header
 $color_header='dark';
