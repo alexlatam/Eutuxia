@@ -38,7 +38,7 @@
 @section('content')
 
     <!-- hero -->
-    <section class="">
+    <section class="pt-5 m-2">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6 mt-5">
@@ -146,7 +146,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <h2><b>Requisitos</b> para Tienda Instagram</h2>
+            <h2 class="text-center"><b>Requisitos</b> para Tienda Instagram</h2>
+            <small>**hacer click en los requisitos para mas información</small>
           </div>
         </div>
         <div class="row justify-content-center">
