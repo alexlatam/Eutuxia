@@ -150,6 +150,9 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 
 	Route::get('/mensajes', 'Cms\MessageController@index')->name('message.home');
 	Route::get('/message/get/{id}', 'Cms\MessageController@getMessage');
+
+	//-------------- LEADS ----------------
+	Route::get('/leads', 'LeadController@index')->name('lead.home');
 });
 
 
