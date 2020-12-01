@@ -14,8 +14,13 @@ class LeadController extends Controller
      */
     public function index()
     {
-        $leads = Lead::orderBy('id','DESC')->paginate(25);
-        return view('cms.leads.leads', compact('leads'));
+        if(auth()->user())
+        {
+            $leads = Lead::orderBy('id','DESC')->paginate(25);
+            return view('cms.leads.leads', compact('leads'));
+        }
+
+        return back();
     }
 
     /**
