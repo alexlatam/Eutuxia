@@ -90,6 +90,7 @@
           <form action="{{route('Lead.store')}}" method="post">
               @csrf
               @method('post')
+              <input type="hidden" name="funnel_type" value="Empresa">
               <div class="modal-header">
                   <h5 class="modal-title"><span>Para continuar leyendo, por favor...</span><br>
                     {{-- <small>Continuar Leyendo...</small> --}}

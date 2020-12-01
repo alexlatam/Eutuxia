@@ -45,11 +45,13 @@ class LeadController extends Controller
         //vars
         $nombre = $request->nombre;
         $correo = $request->correo;
+        $funnel = $request->funnel_type;
         //crear Lead
         $Lead = Lead::create(
             [
                 "name"=> $nombre,
-                "email"=> $correo
+                "email"=> $correo,
+                "funnel" => $funnel,
              ]
             );
         // Store a piece of data in the session...

@@ -23,6 +23,7 @@
           <th>#</th>
           <th>Nombre</th>
           <th>Email</th>
+          <th>Funnel</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -32,6 +33,7 @@
             <td>{{$lead->id}}</td>
             <td>{{$lead->name}}</td>
             <td>{{$lead->email}}</td>
+            <td>{{$lead->funnel}}</td>
             <td class="d-flex ">
               
             </td>
