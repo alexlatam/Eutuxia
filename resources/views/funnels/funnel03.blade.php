@@ -46,7 +46,7 @@
               <p class="text-center h5">La funcionalidad de <mark style="background-color: #8ed825;" >Instagram</mark> te permitirá mostrar tus productos junto con el precio en las publicaciones. <br>
               </p>
                 <img class="d-sm-none" src="{{asset('imagen/funnels/tienda-instagram-01.jpg')}}" alt="tienda de instagram">
-              <h2 class="text-center h5"><b>¡Ya puedes configurar la tuya para Venezuela!</b></h2>
+              <h2 class="text-center h5"><b>¡Configúralo y vende Más!</b></h2>
               <p class="text-center">
                <div class="row">
                  @if (session()->has('usuario_name'))
