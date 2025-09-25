@@ -87,6 +87,12 @@
                 Proyectos
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('cotizacion.home')}}">
+                <span data-feather="file-text"></span>
+                Cotizaciones
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
