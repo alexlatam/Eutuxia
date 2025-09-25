@@ -167,9 +167,14 @@ class CotizacionController extends Controller
             ->where('publicada', true)
             ->firstOrFail();
 
-        // This will require dompdf package - for now return a simple response
-        $pdf = \PDF::loadView('cotizaciones.pdf', compact('cotizacion'));
+        // Generate PDF - using simple approach for now
+        $html = view('cotizaciones.pdf', compact('cotizacion'))->render();
         
-        return $pdf->download('cotizacion-' . $cotizacion->id . '.pdf');
+        // Set proper headers for PDF download
+        $filename = 'cotizacion-' . $cotizacion->id . '.html';
+        
+        return response($html)
+            ->header('Content-Type', 'text/html')
+            ->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
     }
 }
