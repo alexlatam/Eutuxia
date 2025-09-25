@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /cotizacion/
+Disallow: /cms/
+Sitemap: https://oxas.tech/sitemap.xml

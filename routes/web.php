@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Cms\Product;
 use App\Cms\Service;
 use App\Cms\Project;
+use App\Lead;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,20 +17,29 @@ use App\Cms\Project;
 */
 
 Route::get('/cms', function () {
-	return view('cms.index');
-});
+	if (Auth::check()) {
+		// The user is logged in...
+		// return view('cms.index');
+            $leads = Lead::orderBy('id','DESC')->paginate(25);
+            return view('cms.leads.leads', compact('leads'));        
+	}else{
+		return view('auth.login');
+	}
+})->name('login');
 
 
+Route::post('/login', 'LoginController@authenticate');
 
-Route::prefix('cms')->group(function () {
+Route::prefix('cms')->middleware('auth')->group(function () {
+
+	
 
 	//-------------- SERvICIOS ----------------
 	Route::get('/servicios', 'Cms\ServicioController@index')->name('service.home');
 	Route::get('/crear/servicio', 'Cms\ServicioController@crearServicio')->name('service.create');
 	Route::get('/editar/servicio/{id}', 'Cms\ServicioController@editarServicio')->name('service.show');
 
-
-		//metodos posts
+	//metodos posts
 
 	Route::post('/guardar/servicio', 'Cms\ServicioController@guardarServicio')->name('service.store');
 	Route::post('/actualizar/servicio/{id}', 'Cms\ServicioController@actualizarServicio')->name('service.update');
@@ -109,7 +119,6 @@ Route::prefix('cms')->group(function () {
 	Route::post('/banners/project/update/{id}', 'Cms\ProjectBannerController@actualizarBannerProyecto')->name('banner.project.update');
 	Route::post('/banners/project/delete/{id}', 'Cms\ProjectBannerController@eliminarBannersProject')->name('banner.project.destroy');
 
-
 	//-------------- COTIZACIONES ----------------
 	Route::get('/cotizaciones', 'Cms\CotizacionController@index')->name('cotizacion.home');
 	Route::get('/cotizaciones/archivadas', 'Cms\CotizacionController@archived')->name('cotizacion.archived');
@@ -131,25 +140,86 @@ Route::prefix('cms')->group(function () {
 Route::get('/cotizacion/{token}', 'Cms\CotizacionController@showPublic')->name('cotizacion.public');
 Route::get('/cotizacion/{token}/pdf', 'Cms\CotizacionController@downloadPdf')->name('cotizacion.pdf');
 
+	//-------------- BLOG ----------------
 
-Route::get('/', 'HomeController@home');
+  
+  //------ CATEGORIAS ----------
 
-Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
+	Route::get('/blog/categorias', 'Cms\blog\CategoryController@index')->name('blog.category');
+	Route::get('/blog/crear/categoria', 'Cms\blog\CategoryController@crearCategoria')->name('blog.category.create');
+	Route::get('/blog/editar/categoria/{id}', 'Cms\blog\CategoryController@editarCategoria')->name('blog.category.edit');
 
-Route::get('/blog', 'HomeController@blog')->name('blog');
+		//metodo post
+	Route::post('/blog/guardar/categoria', 'Cms\blog\CategoryController@guardarCategoria')->name('blog.category.store');
 
-Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
+	Route::post('/blog/actualizar/categoria/{id}', 'Cms\blog\CategoryController@actualizarCategoria')->name('blog.category.update');
 
-Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
+	Route::post('/blog/eliminar/categoria/{id}', 'Cms\blog\CategoryController@eliminarCategoria')->name('blog.category.destroy');
 
-Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
+			//------ ARTICULOS ----------
 
-Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option');
+	Route::get('/blog/articulos', 'Cms\blog\ArticleController@index')->name('blog.article');
+	Route::get('/blog/crear/articulo', 'Cms\blog\ArticleController@crearArticulo')->name('blog.article.create');
+	Route::get('/blog/editar/articulo/{id}', 'Cms\blog\ArticleController@editarArticulo')->name('blog.article.show');
 
-Route::get('/nosotros', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-	$proyectos = Project::all();
-    return view('nosotros.index')->with(compact('productos', 'servicios', 'proyectos'));
+		//metodo post
+
+	Route::post('/blog/guardar/articulo', 'Cms\blog\ArticleController@guardarArticulo')->name('blog.article.store');
+
+	Route::post('/blog/actualizar/articulo/{id}', 'Cms\blog\ArticleController@actualizarArticulo')->name('blog.article.update');
+
+	Route::post('/blog/eliminar/articulo/{id}', 'Cms\blog\ArticleController@eliminarArticulo')->name('blog.article.destroy');
+
+	//-------------- MENSAJES DE CONTACTO ----------------
+
+	Route::get('/mensajes', 'Cms\MessageController@index')->name('message.home');
+	Route::get('/message/get/{id}', 'Cms\MessageController@getMessage');
+
+	//-------------- LEADS ----------------
+	Route::get('/leads', 'LeadController@index')->name('lead.home');
 });
 
+
+
+Route::get('/', 'MainController@home')->name('home');
+
+Route::get('/contactanos', 'MainController@contactanos')->name('contactanos');
+Route::get('/gracias-por-contactarnos', 'MainController@contactanos')->name('gracias');
+
+
+Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
+
+Route::get('/blog', 'MainController@blog')->name('blog');
+Route::get('/blog/cat/{category_id}', 'MainController@blogCat')->name('blog.cat');
+
+Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show');
+
+
+
+Route::get('/productos/{id}', 'MainController@productos')->name('product.option');
+Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option');
+//nosotros
+Route::get('/nosotros', 'MainController@nosotros'  )->name('nosotros');
+//servicios
+Route::get('/servicios', 'MainController@servicios'  )->name('servicios');
+
+Auth::routes();
+
+
+// funnels
+Route::get('/tienda-de-instagram-venezuela', 'FunnelController@funnel_01')->name('funnel_01');
+Route::get('/tienda-de-instagram-ropa', 'FunnelController@funnel_02')->name('funnel_02');
+Route::get('/tienda-de-instagram-empresa', 'FunnelController@funnel_03')->name('funnel_03');
+Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')->name('funnel_01_ok');
+Route::get('/tienda-de-instagram-venta', 'FunnelController@funnel_04_venta')->name('funnel_o4_venta');
+Route::get('/agencia-de-desarrollo-web', 'FunnelController@funnel_05_servicio')->name('funnel_05_servicio');
+Route::get('/agencia-de-desarrollo-web-gracias', 'FunnelController@funnel_05_servicio_gracias')->name('funnel_05_servicio_gracias');
+
+
+//leads
+Route::resource('Lead', 'LeadController');
+
+//politicas de privacidad
+Route::get('/politicas-de-privacidad', function(){
+	return view('politicas_privacidad');
+})->name('politicas_privacidad');
