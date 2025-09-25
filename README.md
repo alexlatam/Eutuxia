@@ -1,85 +1,169 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Eutuxia Group - Transformamos la Web
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+  <img src="https://via.placeholder.com/400x150/171347/FFFFFF?text=EUTUXIA+GROUP" alt="Eutuxia Group Logo" width="400">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Llevamos tu empresa al próximo nivel</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Sobre Eutuxia
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Eutuxia Group, C.A.** es una empresa enfocada en agilizar la digitalización de los procesos de otras empresas. Nos especializamos en ofrecer soluciones web modernas y eficientes que transforman la manera en que nuestros clientes operan en el mundo digital.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Nuestra Misión
 
-## Learning Laravel
+Transformamos la web proporcionando soluciones digitales innovadoras que impulsan el crecimiento y la eficiencia de las empresas, llevándolas al próximo nivel tecnológico.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Características del Proyecto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Este es el sitio web corporativo de Eutuxia Group, desarrollado con tecnologías modernas para ofrecer una experiencia de usuario excepcional y un sistema de gestión de contenidos robusto.
 
-## Laravel Sponsors
+### Funcionalidades Principales
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Gestión de Servicios**: Administración completa de los servicios ofrecidos
+- **Portfolio de Proyectos**: Showcase de proyectos realizados y casos de éxito
+- **Catálogo de Productos**: Gestión de productos y soluciones digitales
+- **Sistema CMS**: Panel de administración para gestión de contenidos
+- **Blog Corporativo**: Sistema de publicación de artículos y noticias
+- **Contacto**: Formularios de contacto y información de la empresa
 
-### Premium Partners
+## Tecnologías Utilizadas
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,laravel,bootstrap,vue" alt="Tecnologías"/>
+</p>
 
-### Community Sponsors
+- **Backend**: PHP 7.2+ con Laravel Framework 7.x
+- **Frontend**: HTML5, CSS3, JavaScript
+- **UI Framework**: Bootstrap, Materialize CSS
+- **JavaScript Framework**: Vue.js
+- **Base de Datos**: MySQL/MariaDB
+- **Herramientas de Build**: Laravel Mix, Webpack
+- **Dependencias**: Composer (PHP), NPM (JavaScript)
 
-<a href="https://op.gg"><img src="http://opgg-static.akamaized.net/icon/t.rectangle.png" width="150"></a>
+## Instalación y Configuración
 
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [云软科技](http://www.yunruan.ltd/)
+### Requisitos Previos
 
-## Contributing
+- PHP >= 7.2.5
+- Composer
+- Node.js >= 12.x
+- MySQL/MariaDB
+- Servidor web (Apache/Nginx)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Pasos de Instalación
 
-## Code of Conduct
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/alexlatam/Eutuxia.git
+   cd Eutuxia
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. **Instalar dependencias de PHP**
+   ```bash
+   composer install
+   ```
 
-## Security Vulnerabilities
+3. **Instalar dependencias de Node.js**
+   ```bash
+   npm install
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. **Configurar el entorno**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## License
+5. **Configurar la base de datos**
+   - Editar el archivo `.env` con las credenciales de tu base de datos
+   - Ejecutar las migraciones:
+   ```bash
+   php artisan migrate
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+6. **Compilar assets**
+   ```bash
+   npm run dev
+   # o para producción
+   npm run production
+   ```
+
+7. **Iniciar el servidor de desarrollo**
+   ```bash
+   php artisan serve
+   ```
+
+## Estructura del Proyecto
+
+```
+├── app/
+│   ├── Cms/              # Modelos del CMS (Products, Services, Projects)
+│   ├── Http/Controllers/ # Controladores de la aplicación
+│   └── ...
+├── resources/
+│   ├── views/           # Plantillas Blade
+│   │   ├── cms/         # Vistas del panel de administración
+│   │   ├── home/        # Vistas del sitio público
+│   │   └── ...
+│   └── assets/          # Assets frontend
+├── routes/
+│   └── web.php          # Rutas de la aplicación
+└── public/
+    ├── css/             # Estilos compilados
+    ├── js/              # JavaScript compilado
+    └── imagen/          # Imágenes del proyecto
+```
+
+## Uso del Sistema
+
+### Panel de Administración
+
+Accede a `/cms` para gestionar:
+
+- **Servicios**: Crear, editar y eliminar servicios
+- **Proyectos**: Administrar portfolio de proyectos
+- **Productos**: Gestionar catálogo de productos
+- **Banners**: Gestionar elementos visuales
+- **Secciones**: Organizar contenido por secciones
+
+### Sitio Público
+
+- **Inicio** (`/`): Página principal con información de la empresa
+- **Nosotros** (`/nosotros`): Información sobre la empresa
+- **Servicios** (`/servicios/{id}`): Detalle de servicios
+- **Proyectos** (`/proyectos/{id}`): Portfolio de proyectos
+- **Productos** (`/productos/{id}`): Catálogo de productos
+- **Blog** (`/blog`): Artículos y noticias
+- **Contacto** (`/contactanos`): Información de contacto
+
+## Contribución
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Haz fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Información de la Empresa
+
+**Eutuxia Group, C.A.**  
+J-50017524-8
+
+Especialistas en transformación digital y desarrollo web.
+
+---
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+---
+
+<p align="center">
+  <em>© 2020 Eutuxia Group, C.A. - Todos los derechos reservados.</em>
+</p>
