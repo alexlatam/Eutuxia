@@ -103,10 +103,10 @@
           @foreach($cotizacion->items as $index => $item)
           <div class="row item-row {{$index > 0 ? 'mt-2' : ''}}">
             <div class="col-md-6">
-              <input type="text" class="form-control" name="item_nombres[]" placeholder="Nombre del ítem" value="{{$item['nombre'] ?? ''}}">
+              <input type="text" class="form-control" name="item_nombres[]" placeholder="Nombre del ítem" value="{{$item->nombre}}">
             </div>
             <div class="col-md-4">
-              <input type="number" step="0.01" class="form-control item-precio" name="item_precios[]" placeholder="Precio" value="{{$item['precio'] ?? ''}}">
+              <input type="number" step="0.01" class="form-control item-precio" name="item_precios[]" placeholder="Precio" value="{{$item->precio}}">
             </div>
             <div class="col-md-2">
               <button type="button" class="btn btn-danger remove-item" style="{{count($cotizacion->items) <= 1 ? 'display:none;' : ''}}">Eliminar</button>

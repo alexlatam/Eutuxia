@@ -158,8 +158,8 @@
                             <tbody>
                                 @foreach($cotizacion->items as $item)
                                 <tr>
-                                    <td>{{$item['nombre'] ?? ''}}</td>
-                                    <td class="text-right">${{number_format($item['precio'] ?? 0, 2)}}</td>
+                                    <td>{{$item->nombre}}</td>
+                                    <td class="text-right">${{number_format($item->precio, 2)}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

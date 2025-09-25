@@ -5,18 +5,19 @@ namespace App\Http\Controllers\Cms;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Cms\Cotizacion;
+use App\Cms\CotizacionItem;
 
 class CotizacionController extends Controller
 {
     public function index()
     {
-        $cotizaciones = Cotizacion::notArchived()->orderBy('created_at', 'desc')->get();
+        $cotizaciones = Cotizacion::with('items')->notArchived()->orderBy('created_at', 'desc')->get();
         return view('cms.cotizaciones.cotizaciones')->with(compact('cotizaciones'));
     }
 
     public function archived()
     {
-        $cotizaciones = Cotizacion::archived()->orderBy('created_at', 'desc')->get();
+        $cotizaciones = Cotizacion::with('items')->archived()->orderBy('created_at', 'desc')->get();
         return view('cms.cotizaciones.cotizaciones')->with(compact('cotizaciones'));
     }
 
@@ -36,24 +37,26 @@ class CotizacionController extends Controller
             'estatus' => 'required|in:Rechazada,Vencida,Aprobada'
         ]);
 
+        $cotizacion = new Cotizacion($request->all());
+        $cotizacion->save();
+
         // Handle items
-        $items = [];
         if ($request->has('item_nombres') && $request->has('item_precios')) {
             $nombres = $request->input('item_nombres');
             $precios = $request->input('item_precios');
             
             foreach ($nombres as $key => $nombre) {
                 if (!empty($nombre) && isset($precios[$key])) {
-                    $items[] = [
+                    CotizacionItem::create([
+                        'cotizacion_id' => $cotizacion->id,
                         'nombre' => $nombre,
-                        'precio' => (float) $precios[$key]
-                    ];
+                        'precio' => (float) $precios[$key],
+                        'orden' => $key
+                    ]);
                 }
             }
         }
 
-        $cotizacion = new Cotizacion($request->all());
-        $cotizacion->items = $items;
         $cotizacion->total = $cotizacion->calculateTotal();
         $cotizacion->save();
 
@@ -62,7 +65,7 @@ class CotizacionController extends Controller
 
     public function edit($id)
     {
-        $cotizacion = Cotizacion::findOrFail($id);
+        $cotizacion = Cotizacion::with('items')->findOrFail($id);
         return view('cms.cotizaciones.edit')->with(compact('cotizacion'));
     }
 
@@ -78,25 +81,29 @@ class CotizacionController extends Controller
         ]);
 
         $cotizacion = Cotizacion::findOrFail($id);
+        $cotizacion->fill($request->all());
+        $cotizacion->save();
 
-        // Handle items
-        $items = [];
+        // Delete existing items
+        $cotizacion->items()->delete();
+
+        // Handle new items
         if ($request->has('item_nombres') && $request->has('item_precios')) {
             $nombres = $request->input('item_nombres');
             $precios = $request->input('item_precios');
             
             foreach ($nombres as $key => $nombre) {
                 if (!empty($nombre) && isset($precios[$key])) {
-                    $items[] = [
+                    CotizacionItem::create([
+                        'cotizacion_id' => $cotizacion->id,
                         'nombre' => $nombre,
-                        'precio' => (float) $precios[$key]
-                    ];
+                        'precio' => (float) $precios[$key],
+                        'orden' => $key
+                    ]);
                 }
             }
         }
 
-        $cotizacion->fill($request->all());
-        $cotizacion->items = $items;
         $cotizacion->total = $cotizacion->calculateTotal();
         $cotizacion->save();
 
@@ -154,7 +161,7 @@ class CotizacionController extends Controller
 
     public function showPublic($token)
     {
-        $cotizacion = Cotizacion::where('token_publico', $token)
+        $cotizacion = Cotizacion::with('items')->where('token_publico', $token)
             ->where('publicada', true)
             ->firstOrFail();
 
@@ -163,7 +170,7 @@ class CotizacionController extends Controller
 
     public function downloadPdf($token)
     {
-        $cotizacion = Cotizacion::where('token_publico', $token)
+        $cotizacion = Cotizacion::with('items')->where('token_publico', $token)
             ->where('publicada', true)
             ->firstOrFail();
 

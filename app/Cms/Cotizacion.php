@@ -16,7 +16,6 @@ class Cotizacion extends Model
         'descripcion',
         'incluye',
         'no_incluye',
-        'items',
         'total',
         'tiempo_construccion',
         'estatus',
@@ -26,12 +25,19 @@ class Cotizacion extends Model
     ];
 
     protected $casts = [
-        'items' => 'array',
         'fecha' => 'date',
         'archivada' => 'boolean',
         'publicada' => 'boolean',
         'total' => 'decimal:2'
     ];
+
+    /**
+     * Get the items for this cotizacion
+     */
+    public function items()
+    {
+        return $this->hasMany(CotizacionItem::class)->orderBy('orden');
+    }
 
     /**
      * Generate a unique public token
@@ -50,16 +56,7 @@ class Cotizacion extends Model
      */
     public function calculateTotal()
     {
-        if (!$this->items) {
-            return 0;
-        }
-
-        $total = 0;
-        foreach ($this->items as $item) {
-            $total += (float) ($item['precio'] ?? 0);
-        }
-
-        return $total;
+        return $this->items()->sum('precio');
     }
 
     /**

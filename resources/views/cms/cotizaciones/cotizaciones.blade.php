@@ -101,10 +101,7 @@
                 </form>
               @endif
 
-              <form action="{{route('cotizacion.delete', $cotizacion->id)}}" method="POST" class="d-inline" onsubmit="return confirm('¿Está seguro de que desea eliminar esta cotización?')">
-                @csrf
-                <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
-              </form>
+              <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#deleteModal{{$cotizacion->id}}">Eliminar</button>
             </div>
           </td>
         </tr>
@@ -114,4 +111,31 @@
   </div>
 
 </section>
+
+<!-- Delete Confirmation Modals -->
+@foreach($cotizaciones as $cotizacion)
+<div class="modal fade" id="deleteModal{{$cotizacion->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{$cotizacion->id}}" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel{{$cotizacion->id}}">Confirmar Eliminación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro de que desea eliminar la cotización <strong>{{$cotizacion->nombre}}</strong>? Esta acción no se puede deshacer.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <form action="{{route('cotizacion.delete', $cotizacion->id)}}" method="POST" class="d-inline">
+          @csrf
+          <button type="submit" class="btn btn-danger">Eliminar Cotización</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
+
 @endsection
